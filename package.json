@@ -1,0 +1,19 @@
+{
+  "name": "aletheia-voice-pack-archive",
+  "private": true,
+  "type": "module",
+  "description": "Voice Pack Archive (Editions 01-04) and the current Voice Pack edition for thealetheiaproject.org",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "pdf": "node scripts/pdf.mjs",
+    "shots": "node scripts/screens.mjs",
+    "canva": "node scripts/canva-copy.mjs",
+    "release": "node scripts/release.mjs",
+    "all": "npm run build && npm run check && npm run pdf && npm run shots && npm run canva && npm run release"
+  },
+  "devDependencies": {
+    "@fontsource/dm-sans": "^5.0.0",
+    "@fontsource/fraunces": "^5.0.0"
+  }
+}

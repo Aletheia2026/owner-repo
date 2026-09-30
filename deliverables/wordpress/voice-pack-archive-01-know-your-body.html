@@ -1,0 +1,766 @@
+<!-- Aletheia Voice Packs · Know Your Body · generated file, edit the source in the repo and rebuild -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap" rel="stylesheet">
+<style>/* ==========================================================================
+   Aletheia Voice Packs: archive + current edition
+   Everything is scoped under .avp so it can sit inside an Elementor HTML
+   widget on the Qi theme without touching the rest of the site.
+   ========================================================================== */
+
+.avp {
+  /* Aletheia core palette (site-wide) */
+  --cream: #f6efe3;
+  --paper: #fbf8f1;
+  --ink: #1d1a17;
+  --ink-2: #4a423b;
+  --muted: #6d645b;
+  --line: #e2d6c3;
+  --red: #b3322b;
+  --red-deep: #8f2620;
+  --gold: #c49a45;
+  --gold-soft: #efe0bd;
+  --night: #1d1a17;
+
+  /* Edition accent: overridden per edition below */
+  --acc: var(--red);
+  --acc-ink: #fff;
+  --acc-soft: #f6dcd6;
+
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --measure: 68ch;
+  --radius: 14px;
+  --gutter: clamp(16px, 4vw, 40px);
+
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: clamp(16px, 1.05vw + 12px, 18px);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
+}
+.avp *, .avp *::before, .avp *::after { box-sizing: border-box; }
+.avp img, .avp svg { max-width: 100%; height: auto; display: block; }
+.avp p, .avp ul, .avp ol, .avp h1, .avp h2, .avp h3, .avp h4, .avp figure, .avp blockquote { margin: 0; }
+.avp p + p, .avp p + ul, .avp ul + p { margin-top: .9em; }
+.avp ul, .avp ol { padding-left: 1.2em; }
+.avp li + li { margin-top: .35em; }
+.avp h1, .avp h2, .avp h3, .avp h4 { font-family: var(--serif); font-weight: 600; line-height: 1.12; letter-spacing: -.01em; color: inherit; }
+.avp h1 { font-size: clamp(2.3rem, 6vw, 4.6rem); }
+.avp h2 { font-size: clamp(1.75rem, 3.6vw, 2.7rem); }
+.avp h3 { font-size: clamp(1.2rem, 1.8vw, 1.45rem); }
+.avp h4, .avp h3.h4 { font-size: 1.05rem; font-family: var(--sans); font-weight: 700; letter-spacing: 0; line-height: 1.3; }
+.avp em { font-style: italic; }
+.avp strong { font-weight: 700; }
+.avp a { color: var(--red); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 2px; }
+.avp a:hover { color: var(--red-deep); }
+.avp a:focus-visible, .avp button:focus-visible, .avp summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+.avp .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+.avp .wrap { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 var(--gutter); }
+.avp .narrow { max-width: 780px; }
+.avp .prose { max-width: var(--measure); }
+.avp .prose p, .avp .prose li { color: var(--ink-2); }
+.avp .lede { font-size: 1.15em; color: var(--ink-2); max-width: 60ch; }
+.avp .eyebrow { font-family: var(--sans); font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--acc); }
+.avp .section { padding: clamp(56px, 8vw, 104px) 0; }
+.avp .grid { display: grid; gap: clamp(14px, 2vw, 22px); }
+.avp .g2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+.avp .g3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
+.avp .g4 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); }
+.avp .stack > * + * { margin-top: 1rem; }
+
+/* ---------- buttons ---------- */
+.avp .btn { display: inline-flex; align-items: center; gap: .5em; padding: .8em 1.3em; border-radius: 999px; background: var(--red); color: #fff; font-weight: 700; text-decoration: none; border: 2px solid var(--red); line-height: 1.2; }
+.avp .btn:hover { background: var(--red-deep); border-color: var(--red-deep); color: #fff; }
+.avp .btn.ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
+.avp .btn.ghost:hover { background: var(--ink); color: var(--cream); }
+.avp .btn.light { background: var(--cream); color: var(--ink); border-color: var(--cream); }
+.avp .btn.light:hover { background: #fff; color: var(--ink); }
+.avp .btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 1.5rem; }
+
+/* ---------- tags / badges ---------- */
+.avp .tags { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 0; }
+.avp .tags li { margin: 0; font-size: .74rem; font-weight: 700; letter-spacing: .04em; padding: .3em .7em; border-radius: 999px; background: var(--paper); border: 1px solid var(--line); color: var(--ink-2); }
+.avp .badge { display: inline-flex; align-items: center; gap: .5em; font-size: .72rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; padding: .45em .85em; border-radius: 4px; background: var(--ink); color: var(--cream); }
+.avp .badge.current { background: var(--red); color: #fff; }
+.avp .badge .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.avp .badge.current .dot { animation: avp-pulse 2.4s ease-in-out infinite; }
+@keyframes avp-pulse { 50% { opacity: .35; } }
+
+/* ---------- hero ---------- */
+.avp .hero { position: relative; padding: clamp(48px, 8vw, 110px) 0 clamp(40px, 6vw, 80px); overflow: hidden; }
+.avp .hero .wrap { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(24px, 5vw, 64px); align-items: center; }
+.avp .hero h1 { margin: .35em 0 .3em; }
+.avp .hero .q { font-family: var(--serif); font-style: italic; font-size: clamp(1.15rem, 2vw, 1.45rem); color: var(--ink-2); }
+.avp .hero .meta { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 1.4rem; font-size: .86rem; color: var(--muted); }
+.avp .hero .art { position: relative; }
+.avp .hero .art svg { width: 100%; }
+@media (max-width: 820px) { .avp .hero .wrap { grid-template-columns: 1fr; } .avp .hero .art { max-width: 420px; } }
+
+/* ---------- framework strip (LEARN / UNDERSTAND / ...) ---------- */
+.avp .frame { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 1.2rem 0 0; counter-reset: fr; }
+.avp .frame li { margin: 0; counter-increment: fr; display: flex; align-items: center; gap: .55em; font-weight: 700; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; padding: .5em .85em; border: 1.5px solid var(--acc); border-radius: 6px; color: var(--ink); background: var(--paper); }
+.avp .frame li::before { content: counter(fr, decimal-leading-zero); color: var(--acc); font-size: .72rem; }
+
+/* ---------- contents + progress ---------- */
+.avp .layout > * { min-width: 0; }
+.avp .layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: start; }
+.avp .toc { position: sticky; top: 96px; font-size: .9rem; }
+.avp .toc h2 { font-family: var(--sans); font-size: .75rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: .8rem; }
+.avp .toc ol { list-style: none; padding: 0; margin: 0; border-left: 2px solid var(--line); }
+.avp .toc li { margin: 0; }
+.avp .toc a { display: block; padding: .42em 0 .42em 1em; margin-left: -2px; border-left: 2px solid transparent; color: var(--ink-2); font-weight: 500; text-decoration: none; line-height: 1.35; }
+.avp .toc a .n { display: inline-block; min-width: 2em; color: var(--acc); font-weight: 700; font-size: .8em; }
+.avp .toc a:hover, .avp .toc a[aria-current="true"] { color: var(--ink); border-left-color: var(--acc); font-weight: 700; }
+.avp .progress { position: sticky; top: 0; z-index: 5; height: 4px; background: transparent; }
+.avp .progress span { display: block; height: 100%; width: 0; background: var(--acc); transition: width .1s linear; }
+.avp .toc-mobile { display: none; }
+@media (max-width: 960px) {
+  .avp .layout { grid-template-columns: minmax(0, 1fr); }
+  .avp .toc { display: none; }
+  .avp .toc-mobile { display: block; margin: 0 0 2rem; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); }
+  .avp .toc-mobile summary { cursor: pointer; padding: 1em 1.1em; font-weight: 700; list-style: none; display: flex; justify-content: space-between; }
+  .avp .toc-mobile summary::after { content: "+"; font-size: 1.3em; line-height: 1; }
+  .avp .toc-mobile[open] summary::after { content: "–"; }
+  .avp .toc-mobile ol { margin: 0; padding: 0 1.1em 1em 2.2em; }
+}
+
+/* ---------- chapters ---------- */
+.avp .chapter { padding: clamp(40px, 6vw, 72px) 0; border-top: 1px solid var(--line); scroll-margin-top: 80px; }
+.avp .pack-main > .chapter:first-of-type { border-top: 0; padding-top: 0; }
+.avp .ch-head { display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; align-items: end; margin-bottom: 1.6rem; }
+.avp .ch-num { grid-row: span 2; font-family: var(--serif); font-size: clamp(3rem, 7vw, 5rem); line-height: .85; color: var(--acc); font-weight: 300; }
+.avp .ch-head .eyebrow { align-self: end; }
+.avp .ch-head h2 { grid-column: 2; }
+.avp .ch-intro { max-width: var(--measure); color: var(--ink-2); font-size: 1.06em; }
+.avp .block { margin-top: clamp(22px, 3vw, 34px); }
+.avp .block > h3 { margin-bottom: .6rem; }
+
+/* ---------- cards ---------- */
+.avp .card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(18px, 2.4vw, 26px); }
+.avp .card h3, .avp .card h4 { margin-bottom: .4rem; }
+.avp .card p, .avp .card li { font-size: .95em; color: var(--ink-2); }
+.avp .card.tint { background: var(--acc-soft); border-color: transparent; }
+.avp .card.dark { background: var(--night); color: var(--cream); border-color: var(--night); }
+.avp .card.dark p, .avp .card.dark li { color: #e9dfcf; }
+.avp .card.dark a { color: var(--gold-soft); }
+
+/* vocabulary card */
+.avp .vocab { position: relative; }
+.avp .vocab .term { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; }
+.avp .vocab .say { display: block; font-size: .78rem; color: var(--muted); margin: .1em 0 .6em; letter-spacing: .02em; }
+.avp .vocab dl { margin: .6rem 0 0; display: grid; gap: .5rem; }
+.avp .vocab dt { font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--acc); }
+.avp .vocab dd { margin: 0; font-size: .95em; color: var(--ink-2); }
+.avp .vocab .corner { position: absolute; top: 14px; right: 14px; font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+
+/* myth / fact */
+.avp .mf { display: grid; grid-template-columns: 1fr 1fr; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); }
+.avp .mf > div { padding: 18px 20px; }
+.avp .mf .myth { background: var(--paper); }
+.avp .mf .fact { background: var(--acc-soft); }
+.avp .mf .lbl { display: block; font-size: .7rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; margin-bottom: .35rem; }
+.avp .mf .myth .lbl { color: var(--muted); }
+.avp .mf .myth p { text-decoration: line-through; text-decoration-color: rgba(179,50,43,.55); text-decoration-thickness: 2px; color: var(--ink-2); font-family: var(--serif); font-size: 1.05em; }
+.avp .mf .fact .lbl { color: var(--acc); }
+.avp .mf .fact p { color: var(--ink); font-size: .95em; }
+@media (max-width: 620px) { .avp .mf { grid-template-columns: 1fr; } }
+
+/* words you can use */
+.avp .say-list { list-style: none; padding: 0; margin: .5rem 0 0; display: grid; gap: 8px; }
+.avp .say-list li { margin: 0; position: relative; padding: .7em 1em .7em 2.4em; background: #fff; border: 1px solid var(--line); border-radius: 12px 12px 12px 3px; font-family: var(--serif); font-size: 1.02em; color: var(--ink); }
+.avp .say-list li::before { content: "\201C"; position: absolute; left: .55em; top: .05em; font-size: 2em; color: var(--acc); font-family: var(--serif); line-height: 1.2; }
+.avp .say-head, .avp .card .say-head { font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--acc); margin-top: 1rem; }
+
+/* dialogue / script */
+.avp .script { display: grid; gap: 10px; margin-top: .6rem; }
+.avp .line { display: grid; grid-template-columns: 92px 1fr; gap: 12px; align-items: start; }
+.avp .line .who { font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); padding-top: .75em; text-align: right; }
+.avp .line .bub { padding: .7em 1em; border-radius: 14px; background: #fff; border: 1px solid var(--line); }
+.avp .line.them .bub { background: #efe8dc; font-style: italic; color: var(--ink-2); }
+.avp .line.you .bub { background: var(--acc); color: var(--acc-ink); border-color: var(--acc); font-weight: 500; }
+.avp .line.note .bub { background: transparent; border: 1.5px dashed var(--line); font-size: .9em; color: var(--ink-2); }
+@media (max-width: 560px) { .avp .line { grid-template-columns: 1fr; gap: 4px; } .avp .line .who { text-align: left; padding: 0; } }
+
+/* scenario */
+.avp .scenario { position: relative; background: #fff; border: 1px solid var(--line); border-left: 5px solid var(--acc); border-radius: 6px var(--radius) var(--radius) 6px; padding: clamp(18px, 2.6vw, 28px); }
+.avp .scenario .tag { font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--acc); }
+.avp .scenario h3 { margin: .3rem 0 .6rem; }
+.avp .scenario p { color: var(--ink-2); }
+.avp .scenario .fic { display: block; margin-top: .9rem; font-size: .76rem; color: var(--muted); }
+
+/* reflection */
+.avp .reflect { background: var(--paper); border: 1.5px dashed var(--acc); border-radius: var(--radius); padding: clamp(18px, 2.6vw, 28px); }
+.avp .reflect .tag { font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--acc); }
+.avp .reflect ol, .avp .reflect ul { margin-top: .6rem; }
+.avp .reflect li { font-family: var(--serif); font-size: 1.05em; }
+.avp .reflect .lines { margin-top: 1rem; height: 88px; background: repeating-linear-gradient(to bottom, transparent 0 27px, var(--line) 27px 29px); }
+
+/* callouts */
+.avp .callout { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: start; padding: 18px 20px; border-radius: var(--radius); background: var(--paper); border: 1px solid var(--line); }
+.avp .callout .ic { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: var(--acc); color: var(--acc-ink); font-weight: 700; font-family: var(--serif); }
+.avp .callout.urgent { background: #fff4f1; border-color: #eab7ae; }
+.avp .callout.urgent .ic { background: var(--red); color: #fff; }
+.avp .callout h3.h4, .avp .callout h4 { margin-bottom: .25rem; }
+.avp .callout p, .avp .callout li { font-size: .95em; color: var(--ink-2); }
+
+/* three-tier care levels */
+.avp .levels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.avp .level { border-radius: var(--radius); padding: 18px 20px; border: 1px solid var(--line); background: var(--paper); }
+.avp .level .lv { display: inline-block; font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; padding: .25em .6em; border-radius: 4px; margin-bottom: .6rem; }
+.avp .level.l1 .lv { background: #e6ecdf; color: #2f4d24; }
+.avp .level.l2 .lv { background: var(--gold-soft); color: #6b4c10; }
+.avp .level.l3 { background: #fff4f1; border-color: #eab7ae; }
+.avp .level.l3 .lv { background: var(--red); color: #fff; }
+.avp .level h3.h4, .avp .level h4 { margin-bottom: .35rem; }
+.avp .level ul { font-size: .92em; color: var(--ink-2); }
+@media (max-width: 820px) { .avp .levels { grid-template-columns: 1fr; } }
+
+/* pathway / steps */
+.avp .steps { list-style: none; padding: 0; margin: .6rem 0 0; counter-reset: st; display: grid; gap: 0; }
+.avp .steps > li { counter-increment: st; position: relative; margin: 0; padding: 0 0 1.4rem 3.2rem; }
+.avp .steps > li::before { content: counter(st); position: absolute; left: 0; top: 0; width: 2.2rem; height: 2.2rem; border-radius: 50%; display: grid; place-items: center; background: var(--acc); color: var(--acc-ink); font-weight: 700; font-family: var(--serif); }
+.avp .steps > li::after { content: ""; position: absolute; left: 1.05rem; top: 2.4rem; bottom: .2rem; width: 2px; background: var(--line); }
+.avp .steps > li:last-child::after { display: none; }
+.avp .steps h3.h4, .avp .steps h4 { margin: .3rem 0 .2rem; }
+.avp .steps p, .avp .steps li li { color: var(--ink-2); font-size: .95em; }
+
+/* checklist */
+.avp .check { list-style: none; padding: 0; margin: .5rem 0 0; }
+.avp .check li { position: relative; padding-left: 1.9em; margin: .45em 0; color: var(--ink-2); }
+.avp .check li::before { content: ""; position: absolute; left: 0; top: .25em; width: 1.05em; height: 1.05em; border: 2px solid var(--acc); border-radius: 4px; background: #fff; }
+
+/* table */
+.avp .tbl-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
+.avp table { width: 100%; border-collapse: collapse; font-size: .92em; min-width: 560px; }
+.avp th, .avp td { text-align: left; vertical-align: top; padding: .8em 1em; border-bottom: 1px solid var(--line); }
+.avp thead th { background: var(--paper); font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.avp tbody tr:last-child td { border-bottom: 0; }
+.avp td strong { color: var(--ink); }
+
+/* figure / diagram */
+.avp figure.diagram { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(14px, 2.5vw, 28px); }
+.avp figure.diagram figcaption { margin-top: .8rem; font-size: .85rem; color: var(--muted); }
+.avp figure.diagram svg { margin: 0 auto; }
+.avp figure.diagram .swipe { display: none; }
+@media (max-width: 600px) {
+  .avp figure.diagram { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .avp figure.diagram svg { min-width: 500px; }
+  .avp figure.diagram figcaption { position: sticky; left: 0; max-width: calc(100vw - 64px); }
+  .avp figure.diagram .swipe { display: block; position: sticky; left: 0; font-size: .75rem; font-weight: 700; color: var(--muted); margin: 0 0 .5rem; }
+}
+.avp .svg-text { font-family: var(--sans); }
+
+/* pull quote */
+.avp .pull { font-family: var(--serif); font-size: clamp(1.4rem, 2.8vw, 2.1rem); line-height: 1.25; font-weight: 500; padding: .2em 0 .2em .9em; border-left: 4px solid var(--acc); color: var(--ink); max-width: 30ch; }
+.avp .pull cite { display: block; font-family: var(--sans); font-size: .8rem; font-style: normal; color: var(--muted); margin-top: .6em; letter-spacing: .04em; }
+
+/* archive annotation */
+.avp .annot { position: relative; display: grid; grid-template-columns: auto 1fr; gap: 16px; padding: 20px 22px; background: repeating-linear-gradient(-45deg, #f1e7d6 0 10px, #f5ecde 10px 20px); border: 1px solid var(--line); border-radius: 6px; }
+.avp .annot .stamp { font-size: .66rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--ink); border: 1.5px solid var(--ink); padding: .5em .6em; border-radius: 4px; height: max-content; transform: rotate(-3deg); background: var(--paper); white-space: nowrap; }
+.avp .annot p { font-size: .94em; color: var(--ink-2); font-style: italic; font-family: var(--serif); }
+@media (max-width: 560px) { .avp .annot { grid-template-columns: 1fr; } }
+
+/* where it went next */
+.avp .next { background: var(--night); color: var(--cream); border-radius: calc(var(--radius) + 6px); padding: clamp(24px, 4vw, 44px); }
+.avp .next .eyebrow { color: var(--gold); }
+.avp .next h2 { color: var(--cream); margin: .3rem 0 .8rem; }
+.avp .next p { color: #e9dfcf; max-width: 62ch; }
+.avp .next .links { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 12px; margin-top: 1.4rem; }
+.avp .next .links a { display: block; padding: 16px 18px; border-radius: 12px; background: rgba(246,239,227,.07); border: 1px solid rgba(246,239,227,.2); color: var(--cream); text-decoration: none; font-weight: 700; }
+.avp .next .links a span { display: block; font-weight: 400; font-size: .86rem; color: #d8ccb8; margin-top: .25em; }
+.avp .next .links a:hover { background: rgba(246,239,227,.14); border-color: var(--gold); }
+
+/* edition pager */
+.avp .pager { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 28px; }
+.avp .pager a { display: block; padding: 16px 18px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); text-decoration: none; color: var(--ink); }
+.avp .pager a small { display: block; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+.avp .pager a:last-child { text-align: right; }
+.avp .pager a:hover { border-color: var(--acc); }
+@media (max-width: 560px) { .avp .pager { grid-template-columns: 1fr; } .avp .pager a:last-child { text-align: left; } }
+
+/* resource footer */
+.avp .rfoot { margin-top: 40px; padding: 26px 0 0; border-top: 1px solid var(--line); font-size: .86rem; color: var(--muted); }
+.avp .rfoot .help { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 10px; margin: 1rem 0; }
+.avp .rfoot .help div { padding: 12px 14px; background: var(--paper); border: 1px solid var(--line); border-radius: 10px; }
+.avp .rfoot .help strong { display: block; color: var(--ink); font-size: .95rem; }
+.avp .rfoot details { margin-top: 1rem; }
+.avp .rfoot summary { cursor: pointer; font-weight: 700; color: var(--ink); }
+.avp .rfoot ol { margin-top: .6rem; }
+.avp .rfoot ol li { margin: .3em 0; }
+
+/* ---------- archive landing ---------- */
+.avp .timeline { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; list-style: none; padding: 0; margin: 2rem 0 0; }
+.avp .timeline::before { content: ""; position: absolute; left: 4%; right: 4%; top: 30px; height: 2px; background: linear-gradient(90deg, #587592, #b9862e, #2f6b55, #7a2e4a, var(--red)); }
+.avp .timeline li { position: relative; margin: 0; text-align: center; padding: 0 8px; }
+.avp .timeline .node { width: 60px; height: 60px; margin: 0 auto 14px; border-radius: 50%; display: grid; place-items: center; font-family: var(--serif); font-size: 1.2rem; font-weight: 600; background: var(--paper); border: 2px solid var(--c, var(--ink)); color: var(--c, var(--ink)); position: relative; z-index: 1; }
+.avp .timeline li.now .node { width: 72px; height: 72px; margin-top: -6px; background: var(--red); color: #fff; border-color: var(--red); box-shadow: 0 0 0 6px rgba(179,50,43,.15); }
+.avp .timeline .k { display: block; font-size: .72rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--c, var(--ink)); }
+.avp .timeline .w { display: block; font-family: var(--serif); font-size: 1.15rem; font-weight: 600; margin-top: .2em; }
+.avp .timeline .d { display: block; font-size: .84rem; color: var(--muted); margin-top: .3em; line-height: 1.4; }
+@media (max-width: 820px) {
+  .avp .timeline { grid-template-columns: 1fr; gap: 18px; }
+  .avp .timeline::before { left: 29px; right: auto; top: 10px; bottom: 10px; width: 2px; height: auto; background: linear-gradient(180deg, #587592, #b9862e, #2f6b55, #7a2e4a, var(--red)); }
+  .avp .timeline li { display: grid; grid-template-columns: 60px 1fr; gap: 0 16px; text-align: left; padding: 0; }
+  .avp .timeline .node { margin: 0; grid-row: span 3; }
+  .avp .timeline li.now .node { width: 60px; height: 60px; margin: 0; }
+}
+
+.avp .equation { display: grid; gap: 10px; margin-top: 1.6rem; }
+.avp .eq-row { display: grid; grid-template-columns: 150px 1fr; gap: 16px; align-items: center; padding: 12px 16px; border-radius: 12px; background: var(--paper); border: 1px solid var(--line); }
+.avp .eq-row .ed { font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--c); }
+.avp .eq-row .terms { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-weight: 700; font-size: .92rem; }
+.avp .eq-row .terms span.t { padding: .25em .6em; border-radius: 6px; background: #fff; border: 1px solid var(--line); }
+.avp .eq-row .terms span.t.new { background: var(--c); color: #fff; border-color: var(--c); }
+.avp .eq-row .terms .op { color: var(--muted); }
+.avp .eq-row.now { background: var(--night); border-color: var(--night); }
+.avp .eq-row.now .ed { color: var(--gold); }
+.avp .eq-row.now .terms { color: var(--cream); }
+.avp .eq-row.now .terms span.t { background: transparent; border-color: rgba(246,239,227,.35); }
+.avp .eq-row.now .terms span.t.new { background: var(--red); border-color: var(--red); }
+@media (max-width: 620px) { .avp .eq-row { grid-template-columns: 1fr; gap: 6px; } }
+
+.avp .ed-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 18px; }
+.avp .ed-card { display: flex; flex-direction: column; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: transform .2s ease, box-shadow .2s ease; }
+.avp .ed-card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px -18px rgba(29,26,23,.35); }
+.avp .ed-card .cov { aspect-ratio: 4 / 3; background: var(--c-soft); border-bottom: 1px solid var(--line); display: grid; place-items: center; padding: 14px; }
+.avp .ed-card .cov svg { width: 100%; height: 100%; }
+.avp .ed-card .body { padding: 18px 18px 20px; display: flex; flex-direction: column; gap: .55rem; flex: 1; }
+.avp .ed-card .no { font-size: .7rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--c); }
+.avp .ed-card h3 { font-size: 1.35rem; }
+.avp .ed-card .qq { font-family: var(--serif); font-style: italic; color: var(--ink-2); font-size: .98rem; }
+.avp .ed-card p { font-size: .92rem; color: var(--ink-2); }
+.avp .ed-card .cta { margin-top: auto; padding-top: .6rem; }
+.avp .ed-card .cta a { font-size: .95rem; }
+
+.avp .current { position: relative; background: var(--night); color: var(--cream); border-radius: calc(var(--radius) + 8px); overflow: hidden; }
+.avp .current .in { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(24px, 4vw, 56px); align-items: center; padding: clamp(28px, 5vw, 64px); }
+.avp .current h2 { color: var(--cream); font-size: clamp(2rem, 4.4vw, 3.4rem); margin: .6rem 0 .5rem; }
+.avp .current p { color: #e9dfcf; }
+.avp .current .loop-words { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 1.2rem 0 0; }
+.avp .current .loop-words li { margin: 0; font-size: .74rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: .35em .7em; border-radius: 999px; border: 1px solid rgba(246,239,227,.35); color: var(--cream); }
+@media (max-width: 860px) { .avp .current .in { grid-template-columns: 1fr; } }
+
+.avp .learned { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 16px; }
+.avp .learned .card .from { font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--c); }
+.avp .learned .card h3 { font-size: 1.15rem; margin: .3rem 0 .4rem; }
+
+.avp .thread { display: grid; gap: 0; list-style: none; padding: 0; margin: 1.4rem 0 0; }
+.avp .thread li { margin: 0; display: grid; grid-template-columns: 110px 1fr; gap: 18px; padding: 16px 0; border-top: 1px dashed var(--line); }
+.avp .thread li:first-child { border-top: 0; }
+.avp .thread .ed { font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--c); padding-top: .3em; }
+.avp .thread p { color: var(--ink-2); }
+@media (max-width: 560px) { .avp .thread li { grid-template-columns: 1fr; gap: 4px; } }
+
+/* ---------- Edition themes ----------
+   Each edition keeps the Aletheia DNA (cream, ink, Fraunces/DM Sans) and
+   moves its accent closer to Aletheia red as the thinking matures. */
+.avp[data-ed="01"] { --acc: #3f607e; --acc-soft: #dfe7ee; --acc-ink: #fff; }
+.avp[data-ed="02"] { --acc: #8a5f0f; --acc-soft: #f3e6c6; --acc-ink: #fff; }
+.avp[data-ed="03"] { --acc: #2f6b55; --acc-soft: #dcebe3; --acc-ink: #fff; }
+.avp[data-ed="04"] { --acc: #7a2e4a; --acc-soft: #efdde3; --acc-ink: #fff; }
+.avp[data-ed="05"], .avp[data-ed="arc"] { --acc: var(--red); --acc-soft: #f6dcd6; --acc-ink: #fff; }
+
+/* 01: health-education workbook, graph paper under the hero */
+.avp[data-ed="01"] .hero { background-image: linear-gradient(rgba(63,96,126,.09) 1px, transparent 1px), linear-gradient(90deg, rgba(63,96,126,.09) 1px, transparent 1px); background-size: 24px 24px; }
+.avp[data-ed="01"] .label-note { font-family: var(--serif); font-style: italic; color: var(--acc); }
+
+/* 02: speech + index-card language */
+.avp[data-ed="02"] .hero { background: radial-gradient(circle at 85% 30%, #f3e6c6 0, transparent 45%); }
+.avp[data-ed="02"] .vocab { border-radius: 4px; box-shadow: 3px 3px 0 var(--gold-soft); }
+
+/* 03: navigation, map lines */
+.avp[data-ed="03"] .hero { background-image: radial-gradient(circle, rgba(47,107,85,.18) 1.5px, transparent 1.6px); background-size: 22px 22px; }
+
+/* 04: networks, darker and more editorial */
+.avp[data-ed="04"] .hero { background: var(--night); color: var(--cream); }
+.avp[data-ed="04"] .hero .q, .avp[data-ed="04"] .hero .lede, .avp[data-ed="04"] .hero .meta { color: #e2d6c3; }
+.avp[data-ed="04"] .hero .eyebrow { color: #e7a9bf; }
+.avp[data-ed="04"] .hero .frame li { background: transparent; color: var(--cream); border-color: #b76a87; }
+.avp[data-ed="04"] .hero .frame li::before { color: #e7a9bf; }
+.avp[data-ed="04"] .hero .btn.ghost { color: var(--cream); border-color: var(--cream); }
+
+/* 05: the current edition. Echo type recreates the stacked-title look of the April 2026 Canva edition */
+.avp[data-ed="05"] .hero { background: var(--night); color: var(--cream); padding-bottom: clamp(56px, 8vw, 110px); }
+.avp[data-ed="05"] .hero .lede, .avp[data-ed="05"] .hero .meta, .avp[data-ed="05"] .hero .q { color: #e2d6c3; }
+.avp[data-ed="05"] .hero .frame li { background: transparent; color: var(--cream); border-color: rgba(246,239,227,.4); }
+.avp[data-ed="05"] .hero .frame li::before { color: #f08a80; }
+.avp[data-ed="05"] .hero .eyebrow { color: var(--gold); }
+.avp[data-ed="05"] .hero .btn.ghost { color: var(--cream); border-color: var(--cream); }
+.avp .echo { position: relative; display: inline-block; }
+.avp .echo::before, .avp .echo::after { content: attr(data-text); position: absolute; left: 0; top: 0; pointer-events: none; z-index: -1; color: transparent; -webkit-text-stroke: 1.5px var(--red); }
+.avp .echo::before { transform: translate(.045em, .045em); opacity: .8; }
+.avp .echo::after { transform: translate(.09em, .09em); opacity: .45; }
+.avp .echo-wrap { position: relative; z-index: 0; isolation: isolate; }
+.avp .echo.r { color: #e0564c; }
+.avp .echo.r::before, .avp .echo.r::after { -webkit-text-stroke-color: var(--cream); }
+.avp .echo.g { color: var(--gold); }
+
+/* the Aletheia loop */
+.avp .loop-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.avp .loop-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+.avp .loop-list li { margin: 0; display: grid; grid-template-columns: 38px 1fr; gap: 12px; align-items: start; padding: 10px 12px; border-radius: 10px; background: #fff; border: 1px solid var(--line); }
+.avp .loop-list .k { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; background: var(--red); color: #fff; font-weight: 700; font-family: var(--serif); }
+.avp .loop-list strong { display: block; }
+.avp .loop-list span { font-size: .9rem; color: var(--ink-2); }
+
+.avp .doors { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 12px; }
+.avp .door { display: block; padding: 18px; border-radius: 14px; background: var(--paper); border: 1px solid var(--line); text-decoration: none; color: var(--ink); position: relative; }
+.avp .door:hover { border-color: var(--red); }
+.avp .door .s { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; display: block; }
+.avp .door .go { display: block; margin-top: .4rem; font-size: .88rem; color: var(--ink-2); font-weight: 400; }
+.avp .door .stage { display: block; margin-bottom: .35rem; font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: var(--red); font-weight: 700; }
+
+.avp .stagechips { display: flex; flex-wrap: wrap; gap: 4px; margin-top: .6rem; list-style: none; padding: 0; }
+.avp .stagechips li { margin: 0; font-size: .64rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: .2em .5em; border-radius: 4px; background: var(--ink); color: var(--cream); }
+
+/* dismissal cards (current edition) */
+.avp .dcard { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
+.avp .dcard .heard { background: #efe8dc; padding: 14px 18px; font-family: var(--serif); font-style: italic; font-size: 1.1rem; color: var(--ink); }
+.avp .dcard .heard small { display: block; font-family: var(--sans); font-style: normal; font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: .2rem; }
+.avp .dcard .b { padding: 14px 18px 18px; display: grid; gap: .7rem; }
+.avp .dcard .b .k { font-size: .66rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--red); display: block; margin-bottom: .15rem; }
+.avp .dcard .b p { font-size: .93em; color: var(--ink-2); }
+.avp .dcard .b .you { font-family: var(--serif); color: var(--ink); font-size: 1rem; }
+
+/* dark band */
+.avp .band { background: var(--night); color: var(--cream); }
+.avp .band h2, .avp .band h3 { color: var(--cream); }
+.avp .band p { color: #e2d6c3; }
+.avp .band .eyebrow { color: var(--gold); }
+.avp .band a:not(.btn) { color: var(--gold-soft); }
+
+/* teaser strip (Voice Packs page) */
+.avp .strip { display: grid; grid-template-columns: repeat(4, 1fr) 1.25fr; gap: 10px; align-items: stretch; margin-top: 1.6rem; }
+.avp .strip a { display: flex; flex-direction: column; gap: 8px; padding: 14px; border-radius: 12px; background: var(--paper); border: 1px solid var(--line); text-decoration: none; color: var(--ink); }
+.avp .strip a .cov { aspect-ratio: 4/3; border-radius: 8px; background: var(--c-soft); display: grid; place-items: center; padding: 8px; }
+.avp .strip a small { font-size: .66rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--c); }
+.avp .strip a strong { font-family: var(--serif); font-size: 1.05rem; line-height: 1.2; }
+.avp .strip a.now { background: var(--red); border-color: var(--red); color: #fff; }
+.avp .strip a.now small { color: #ffe3dc; }
+.avp .strip a.now .cov { background: rgba(255,255,255,.12); }
+.avp .strip a:hover { border-color: var(--c, var(--red)); transform: translateY(-2px); }
+@media (max-width: 900px) { .avp .strip { grid-template-columns: 1fr 1fr; } .avp .strip a.now { grid-column: 1 / -1; } }
+
+/* support directory */
+.avp .dir { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 10px; }
+.avp .dir div { padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+.avp .dir strong { display: block; font-family: var(--serif); font-size: 1.05rem; }
+.avp .dir .num { display: block; font-weight: 700; color: var(--red); margin: .15rem 0; font-size: 1.05rem; }
+.avp .dir span { font-size: .85rem; color: var(--ink-2); }
+
+/* print */
+@media print {
+  .avp { background: #fff; font-size: 10.5pt; }
+  .avp .toc, .avp .toc-mobile, .avp .progress, .avp .btns, .avp .pager, .avp .no-print { display: none !important; }
+  .avp .layout { grid-template-columns: 1fr; }
+  .avp .hero { padding: 28pt 0 18pt; }
+  .avp .chapter { break-before: page; padding-top: 0; border-top: 0; }
+  .avp .card, .avp .scenario, .avp .reflect, .avp .callout, .avp .mf, .avp figure, .avp .dcard, .avp .level, .avp .vocab, .avp .line, .avp .steps > li, .avp .next { break-inside: avoid; }
+  .avp a { color: inherit; text-decoration: none; }
+  .avp .section { padding: 18pt 0; }
+  .avp .ed-card:hover { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) { .avp *, .avp *::before, .avp *::after { animation: none !important; transition: none !important; } }
+</style>
+<div class="avp" data-ed="01">
+<div class="progress" aria-hidden="true"><span></span></div>
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="badge"><span class="dot" aria-hidden="true"></span>Archive Edition 01</span>
+      <p class="eyebrow" style="margin-top:1.2rem">Voice Pack Archive</p>
+      <h1>Know Your Body</h1>
+      <p class="q">“What is happening in my body?”</p>
+      <p class="lede" style="margin-top:1rem">The health class a lot of us never got. What your body is made of, what changes in puberty, how a period actually works, and the words for all of it, said plainly and without embarrassment.</p>
+      <ol class="frame" aria-label="How this edition is organised"><li>Learn</li><li>Understand</li><li>Normalise</li></ol>
+      <div class="btns no-print">
+        <a class="btn" href="#start">Start reading</a>
+        <a class="btn ghost" href="/wp-content/uploads/2026/10/Aletheia-Voice-Pack-Archive-Edition-01-Know-Your-Body.pdf" target="_blank" rel="noopener">Open the PDF<span class="sr-only"> (opens in a new tab)</span></a>
+      </div>
+      <div class="meta"><span>About 25 minutes to read</span><span>For ages 12+</span></div>
+    </div>
+    <div class="art"><svg class="" viewBox="0 0 320 240" role="img" aria-labelledby="g1t g1d" xmlns="http://www.w3.org/2000/svg"><title id="g1t">Edition 01 cover: an annotated body diagram</title><desc id="g1d">A simple outline of the uterus, fallopian tubes and ovaries on graph paper, with handwritten-style labels and arrows.</desc>
+      <defs><pattern id="gp01" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#3f607e" stroke-opacity=".14"/></pattern></defs>
+      <rect width="320" height="240" fill="url(#gp01)"/>
+      <g fill="none" stroke="#3f607e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M126 96c0-40 68-40 68 0 0 34-16 52-24 62v18c0 6-20 6-20 0v-18c-8-10-24-28-24-62z" fill="#fff"/>
+        <path d="M130 84c-18-12-34-10-44 2"/><path d="M190 84c18-12 34-10 44 2"/>
+        <ellipse cx="82" cy="110" rx="14" ry="10" fill="#fff"/><ellipse cx="238" cy="110" rx="14" ry="10" fill="#fff"/>
+        <path d="M152 180l-2 22M168 180l2 22" />
+      </g>
+      <g stroke="#1d1a17" stroke-width="1.5" fill="none" stroke-dasharray="3 4"><path d="M60 60l18 36"/><path d="M262 60l-20 38"/><path d="M226 196l-50-24"/></g>
+      <text x="34" y="54" font-size="15" font-weight="500" text-anchor="start" fill="#3f607e" font-family="var(--serif, Georgia, serif)" font-style="italic">ovary</text>
+      <text x="240" y="54" font-size="15" font-weight="500" text-anchor="start" fill="#3f607e" font-family="var(--serif, Georgia, serif)" font-style="italic">tube</text>
+      <text x="212" y="212" font-size="15" font-weight="500" text-anchor="start" fill="#3f607e" font-family="var(--serif, Georgia, serif)" font-style="italic">cervix</text>
+      <text x="20" y="226" font-size="10" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">EDITION 01 · KNOW YOUR BODY</text></svg></div>
+  </div>
+</header>
+<div class="wrap section" style="padding-top:clamp(28px,4vw,48px)">
+  <div style="margin-bottom:clamp(28px,4vw,44px)"><aside class="annot" aria-label="From the archive"><span class="stamp">From the archive</span><p>This is the earliest Voice Pack in our archive. It reflects the stage of Aletheia’s work when we believed the main problem was missing information: if young people simply knew how their bodies worked, the shame would lift. That was true, and it still is. It just wasn’t the whole story. Our work has since grown into language, healthcare navigation, youth advocacy and systems change, but everything we make still starts here.</p></aside></div>
+  <div class="layout">
+    <nav class="toc no-print" aria-label="Contents"><h2>Contents</h2><ol><li><a href="#start" data-toc="start"><span class="n">01</span>Start here</a></li><li><a href="#learn" data-toc="learn"><span class="n">02</span>Your body, labelled</a></li><li><a href="#puberty" data-toc="puberty"><span class="n">03</span>Puberty and hormones</a></li><li><a href="#cycle" data-toc="cycle"><span class="n">04</span>How a period works</a></li><li><a href="#normalise" data-toc="normalise"><span class="n">05</span>Myths and facts</a></li><li><a href="#check-in" data-toc="check-in"><span class="n">06</span>When to check in</a></li></ol></nav>
+    <article class="pack-main">
+      <details class="toc-mobile no-print"><summary>Contents</summary><ol><li><a href="#start">Start here</a></li><li><a href="#learn">Your body, labelled</a></li><li><a href="#puberty">Puberty and hormones</a></li><li><a href="#cycle">How a period works</a></li><li><a href="#normalise">Myths and facts</a></li><li><a href="#check-in">When to check in</a></li></ol></details>
+      <section class="chapter" id="start" aria-labelledby="start-h"><div class="ch-head"><span class="ch-num" aria-hidden="true">01</span><p class="eyebrow">Before we begin</p><h2 id="start-h">Your body is not inappropriate</h2></div><div class="ch-intro"><p>A lot of us learned about our bodies in whispers. From a sibling, a group chat, a diagram in a textbook that the teacher skipped. Some of us learned that certain parts of our body didn’t have names, or had names you weren’t supposed to say out loud.</p><p>This pack does the opposite. It uses the real words, explains them plainly, and treats your body as what it is: normal, worth understanding, and yours.</p></div><div class="block"><div class="grid g3"><div class="block"><div class="card"><p class="eyebrow">Learn</p><h3>What’s there</h3><p>The parts of the body, inside and out, and what each one does.</p></div></div><div class="block"><div class="card"><p class="eyebrow">Understand</p><h3>What’s happening</h3><p>Puberty, hormones and the menstrual cycle, step by step.</p></div></div><div class="block"><div class="card"><p class="eyebrow">Normalise</p><h3>What’s normal</h3><p>Myths, facts and the wide range of bodies that are completely healthy.</p></div></div></div></div><div class="block"><div class="callout"><span class="ic" aria-hidden="true">i</span><div><h3 class="h4">A note on words</h3><p>We use the correct medical names, because they’re the ones a doctor will understand and because nothing about them is rude. This pack focuses on the bodies of girls and people with a uterus, because that’s where the silence has been loudest. Not everyone with these body parts is a girl, and not every girl has them. Everyone deserves to understand the body they live in.</p></div></div></div></section><section class="chapter" id="learn" aria-labelledby="learn-h"><div class="ch-head"><span class="ch-num" aria-hidden="true">02</span><p class="eyebrow">Learn</p><h2 id="learn-h">Your body, labelled</h2></div><div class="ch-intro"><p>Most of the reproductive system is inside the body, which is part of why it feels mysterious. Here are the main parts, what they’re called and what they do.</p></div><div class="block"><h3>Inside: the reproductive organs</h3><figure class="diagram"><p class="swipe" aria-hidden="true">Swipe sideways to see the whole diagram →</p><svg class="" viewBox="0 0 640 440" role="img" aria-labelledby="g2t g2d" xmlns="http://www.w3.org/2000/svg" style="max-width:640px"><title id="g2t">Diagram: the uterus, fallopian tubes, ovaries, cervix and vagina, seen from the front</title><desc id="g2d">A front-view line drawing. The uterus sits in the centre, shaped like an upside-down pear, with its lining (the endometrium) inside. A fallopian tube curves out from each upper corner, ending near an ovary on each side. The narrow bottom of the uterus is the cervix, which opens into the vagina, a muscular canal leading to the outside of the body.</desc>
+    <g fill="none" stroke="var(--acc, #3f607e)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M255 132C218 108 178 104 146 124c-8 5-10 14-4 20" />
+      <path d="M385 132C422 108 462 104 494 124c8 5 10 14 4 20" />
+      <path d="M142 144c-8 2-12 10-8 16M146 146c-2 8 0 14 6 16M498 144c8 2 12 10 8 16M494 146c2 8 0 14-6 16" stroke-width="2.2"/>
+      <ellipse cx="180" cy="176" rx="30" ry="19" fill="#fff"/><ellipse cx="460" cy="176" rx="30" ry="19" fill="#fff"/>
+      <path d="M210 178C230 180 240 176 252 170M430 178C410 180 400 176 388 170" stroke-width="1.8" stroke-dasharray="3 4"/>
+      <path d="M250 152C250 96 390 96 390 152c0 64-28 100-44 118v34c0 12-52 12-52 0v-34c-16-18-44-54-44-118z" fill="#fff"/>
+      <path d="M282 146Q320 158 358 146Q344 214 320 252Q296 214 282 146z" fill="var(--acc, #3f607e)" fill-opacity=".12" stroke-width="2"/>
+      <path d="M300 310l-4 96M340 310l4 96"/>
+    </g>
+    <text x="20" y="70" font-size="19" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">Fallopian tube</text><path d="M170 78L208 110" fill="none" stroke="#1d1a17" stroke-width="1.3"/><circle cx="208" cy="110" r="3" fill="#1d1a17"/>
+    <text x="20" y="244" font-size="19" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">Ovary</text><path d="M84 238L152 186" fill="none" stroke="#1d1a17" stroke-width="1.3"/><circle cx="152" cy="186" r="3" fill="#1d1a17"/>
+    <text x="460" y="70" font-size="19" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">Lining</text><text x="460" y="90" font-size="15" font-weight="500" text-anchor="start" fill="#4a423b" font-family="var(--sans, sans-serif)">(endometrium)</text><path d="M456 74L342 158" fill="none" stroke="#1d1a17" stroke-width="1.3"/><circle cx="342" cy="158" r="3" fill="#1d1a17"/>
+    <text x="460" y="244" font-size="19" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">Uterus (womb)</text><path d="M454 238L384 200" fill="none" stroke="#1d1a17" stroke-width="1.3"/><circle cx="384" cy="200" r="3" fill="#1d1a17"/>
+    <text x="460" y="318" font-size="19" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">Cervix</text><path d="M454 312L350 300" fill="none" stroke="#1d1a17" stroke-width="1.3"/><circle cx="350" cy="300" r="3" fill="#1d1a17"/>
+    <text x="460" y="392" font-size="19" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">Vagina</text><path d="M454 386L346 380" fill="none" stroke="#1d1a17" stroke-width="1.3"/><circle cx="346" cy="380" r="3" fill="#1d1a17"/>
+    <text x="320" y="432" font-size="15" font-weight="500" text-anchor="middle" fill="#4a423b" font-family="var(--serif, Georgia, serif)" font-style="italic">Simplified and not to scale. Every body varies.</text></svg><figcaption>Front view, simplified. The uterus is roughly the size of a small pear and sits low in the pelvis, between the bladder and the bowel.</figcaption></figure></div><div class="block"><div class="grid g2"><article class="card vocab">
+    
+    <h3 class="term">Uterus</h3><span class="say">YOO-ter-us · also called the womb</span>
+    <dl>
+      <div><dt>What it is</dt><dd>A hollow, muscular organ. Each month its lining thickens in case of pregnancy, then sheds if there isn’t one. That shedding is a period.</dd></div>
+      
+      
+      
+      <div><dt>Good to know</dt><dd>The uterus is a muscle. Period cramps happen when it squeezes to push the lining out.</dd></div>
+    </dl>
+    
+    
+  </article><article class="card vocab">
+    
+    <h3 class="term">Ovaries</h3><span class="say">OH-va-rees</span>
+    <dl>
+      <div><dt>What it is</dt><dd>Two small organs, one on each side, that store eggs and make the hormones oestrogen and progesterone.</dd></div>
+      
+      
+      
+      <div><dt>Good to know</dt><dd>You’re born with all the eggs you will ever have. From puberty, usually one is released each cycle.</dd></div>
+    </dl>
+    
+    
+  </article><article class="card vocab">
+    
+    <h3 class="term">Fallopian tubes</h3><span class="say">fa-LOH-pee-an</span>
+    <dl>
+      <div><dt>What it is</dt><dd>Two thin tubes that carry an egg from the ovary towards the uterus. If sperm meets an egg, it usually happens here.</dd></div>
+      
+      
+      
+      
+    </dl>
+    
+    
+  </article><article class="card vocab">
+    
+    <h3 class="term">Cervix</h3><span class="say">SER-vix</span>
+    <dl>
+      <div><dt>What it is</dt><dd>The narrow lower end of the uterus that opens into the vagina. Period blood passes through it. Cervical screening checks this area from age 25.</dd></div>
+      
+      
+      
+      
+    </dl>
+    
+    
+  </article><article class="card vocab">
+    
+    <h3 class="term">Vagina</h3><span class="say">va-JY-na</span>
+    <dl>
+      <div><dt>What it is</dt><dd>A stretchy, muscular canal from the cervix to the outside of the body. Period blood leaves through it, and it’s where a tampon or menstrual cup goes.</dd></div>
+      
+      
+      
+      <div><dt>Good to know</dt><dd>The vagina is inside. The parts you can see on the outside are the vulva.</dd></div>
+    </dl>
+    
+    
+  </article><article class="card vocab">
+    
+    <h3 class="term">Hymen</h3><span class="say">HY-men</span>
+    <dl>
+      <div><dt>What it is</dt><dd>A thin, flexible piece of tissue around the vaginal opening. It varies a lot between people and naturally stretches over time.</dd></div>
+      
+      
+      
+      <div><dt>Good to know</dt><dd>It doesn’t “break” in a way that shows anything about someone’s sexual history. More in the myths section.</dd></div>
+    </dl>
+    
+    
+  </article></div></div><div class="block"><h3>Outside: the vulva</h3><figure class="diagram"><p class="swipe" aria-hidden="true">Swipe sideways to see the whole diagram →</p><svg class="" viewBox="0 0 640 460" role="img" aria-labelledby="g3t g3d" xmlns="http://www.w3.org/2000/svg" style="max-width:640px"><title id="g3t">Diagram: the vulva, labelled</title><desc id="g3d">A simplified, non-realistic line diagram of the vulva from the front. Labels point to the mons pubis at the top, the clitoris, the outer labia, the inner labia, the urethral opening, the vaginal opening, the perineum and, separately below, the anus. A note says every vulva looks different.</desc>
+    <g fill="none" stroke="var(--acc, #3f607e)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M232 110c0-40 40-66 88-66s88 26 88 66" stroke-opacity=".4"/>
+      <path d="M320 96c-58 10-84 70-78 140 6 68 42 108 78 114 36-6 72-46 78-114 6-70-20-130-78-140z" fill="#fff"/>
+      <path d="M320 122c-26 8-38 50-36 110 2 54 18 84 36 90 18-6 34-36 36-90 2-60-10-102-36-110z"/>
+      <path d="M306 128c4-12 24-12 28 0-4 10-24 10-28 0z" fill="var(--acc, #3f607e)" fill-opacity=".2"/>
+      <circle cx="320" cy="146" r="6" fill="var(--acc, #3f607e)"/>
+      <circle cx="320" cy="206" r="4" fill="#fff"/>
+      <ellipse cx="320" cy="258" rx="13" ry="25" fill="#fff"/>
+      <circle cx="320" cy="400" r="10" fill="#fff"/>
+    </g>
+    <text x="452" y="58" font-size="19" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">Mons pubis</text><path d="M446 52L360 64" stroke="#1d1a17" stroke-width="1.3"/><circle cx="360" cy="64" r="3" fill="#1d1a17"/>
+    <text x="452" y="150" font-size="19" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">Clitoris</text><path d="M446 144L328 146" stroke="#1d1a17" stroke-width="1.3"/><circle cx="328" cy="146" r="3" fill="#1d1a17"/>
+    <text x="452" y="212" font-size="19" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">Outer labia</text><path d="M446 206L392 206" stroke="#1d1a17" stroke-width="1.3"/><circle cx="392" cy="206" r="3" fill="#1d1a17"/>
+    <text x="452" y="274" font-size="19" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">Inner labia</text><path d="M446 268L352 262" stroke="#1d1a17" stroke-width="1.3"/><circle cx="352" cy="262" r="3" fill="#1d1a17"/>
+    <text x="20" y="196" font-size="19" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">Urethral</text><text x="20" y="218" font-size="19" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">opening</text><path d="M112 206L314 206" stroke="#1d1a17" stroke-width="1.3"/><circle cx="314" cy="206" r="3" fill="#1d1a17"/>
+    <text x="20" y="262" font-size="19" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">Vaginal</text><text x="20" y="284" font-size="19" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">opening</text><path d="M104 270L306 262" stroke="#1d1a17" stroke-width="1.3"/><circle cx="306" cy="262" r="3" fill="#1d1a17"/>
+    <text x="20" y="344" font-size="19" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">Perineum</text><path d="M120 338L318 336" stroke="#1d1a17" stroke-width="1.3"/><circle cx="318" cy="336" r="3" fill="#1d1a17"/>
+    <text x="452" y="406" font-size="19" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">Anus</text><path d="M446 400L332 400" stroke="#1d1a17" stroke-width="1.3"/><circle cx="332" cy="400" r="3" fill="#1d1a17"/>
+    <text x="320" y="452" font-size="15" font-weight="500" text-anchor="middle" fill="#4a423b" font-family="var(--serif, Georgia, serif)" font-style="italic">Simplified. Every vulva looks different, and that’s normal.</text></svg><figcaption>A simplified diagram, not a realistic drawing. Real vulvas vary a lot in colour, size and shape, including labia that are uneven or longer than the outer labia. All of that is normal.</figcaption></figure></div><div class="block"><div class="grid g3"><article class="card vocab">
+    
+    <h3 class="term">Vulva</h3>
+    <dl>
+      <div><dt>What it is</dt><dd>The name for all the outside parts together: the mons, labia, clitoris and the urethral and vaginal openings.</dd></div>
+      
+      
+      
+      
+    </dl>
+    
+    
+  </article><article class="card vocab">
+    
+    <h3 class="term">Labia</h3>
+    <dl>
+      <div><dt>What it is</dt><dd>The outer and inner folds of skin (lips) that protect the openings. Inner labia often show past the outer ones.</dd></div>
+      
+      
+      
+      
+    </dl>
+    
+    
+  </article><article class="card vocab">
+    
+    <h3 class="term">Clitoris</h3>
+    <dl>
+      <div><dt>What it is</dt><dd>A sensitive organ. Only the tip (glans) is visible; most of it extends inside the body.</dd></div>
+      
+      
+      
+      
+    </dl>
+    
+    
+  </article><article class="card vocab">
+    
+    <h3 class="term">Urethral opening</h3>
+    <dl>
+      <div><dt>What it is</dt><dd>A small opening where urine (wee) leaves. It’s separate from the vagina.</dd></div>
+      
+      
+      
+      
+    </dl>
+    
+    
+  </article><article class="card vocab">
+    
+    <h3 class="term">Vaginal opening</h3>
+    <dl>
+      <div><dt>What it is</dt><dd>Below the urethra. Period blood and discharge leave here.</dd></div>
+      
+      
+      
+      
+    </dl>
+    
+    
+  </article><article class="card vocab">
+    
+    <h3 class="term">Anus</h3>
+    <dl>
+      <div><dt>What it is</dt><dd>Where poo leaves the body. It’s behind the vulva, not part of it.</dd></div>
+      
+      
+      
+      
+    </dl>
+    
+    
+  </article></div></div><div class="block"><div class="card tint"><h3>Other bodies, too</h3><p>Bodies with testes go through puberty as well: the testes start producing sperm and testosterone, the voice deepens, and wet dreams and unexpected erections are common and normal. Knowing how other bodies work helps everyone talk about health without awkwardness, and it matters for intersex people and anyone whose body doesn’t match a textbook.</p></div></div></section><section class="chapter" id="puberty" aria-labelledby="puberty-h"><div class="ch-head"><span class="ch-num" aria-hidden="true">03</span><p class="eyebrow">Understand</p><h2 id="puberty-h">Puberty, and the hormones behind it</h2></div><div class="ch-intro"><p>Puberty is the few years when your body shifts from a child’s to an adult’s. It usually starts somewhere between 8 and 13, it doesn’t follow a fixed order, and it isn’t a race.</p></div><div class="block"><figure class="diagram"><p class="swipe" aria-hidden="true">Swipe sideways to see the whole diagram →</p><svg class="" viewBox="0 0 640 330" role="img" aria-labelledby="g4t g4d" xmlns="http://www.w3.org/2000/svg" style="max-width:640px"><title id="g4t">Chart: common age ranges for puberty changes</title><desc id="g4d">A horizontal timeline from age 7 to 17 with five bars: breast or chest development usually begins between 8 and 13, pubic and underarm hair between about 9 and 14, the growth spurt about 9.5 to 14.5, first period usually between 10 and 15, and skin and sweat changes between about 9 and 16. Ranges vary widely between people.</desc>
+    <line x1="60" y1="40" x2="60" y2="280" stroke="#e2d6c3"/><text x="60" y="300" font-size="12" font-weight="500" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">7</text><line x1="112" y1="40" x2="112" y2="280" stroke="#e2d6c3"/><text x="112" y="300" font-size="12" font-weight="500" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">8</text><line x1="164" y1="40" x2="164" y2="280" stroke="#e2d6c3"/><text x="164" y="300" font-size="12" font-weight="500" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">9</text><line x1="216" y1="40" x2="216" y2="280" stroke="#e2d6c3"/><text x="216" y="300" font-size="12" font-weight="500" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">10</text><line x1="268" y1="40" x2="268" y2="280" stroke="#e2d6c3"/><text x="268" y="300" font-size="12" font-weight="500" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">11</text><line x1="320" y1="40" x2="320" y2="280" stroke="#e2d6c3"/><text x="320" y="300" font-size="12" font-weight="500" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">12</text><line x1="372" y1="40" x2="372" y2="280" stroke="#e2d6c3"/><text x="372" y="300" font-size="12" font-weight="500" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">13</text><line x1="424" y1="40" x2="424" y2="280" stroke="#e2d6c3"/><text x="424" y="300" font-size="12" font-weight="500" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">14</text><line x1="476" y1="40" x2="476" y2="280" stroke="#e2d6c3"/><text x="476" y="300" font-size="12" font-weight="500" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">15</text><line x1="528" y1="40" x2="528" y2="280" stroke="#e2d6c3"/><text x="528" y="300" font-size="12" font-weight="500" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">16</text><line x1="580" y1="40" x2="580" y2="280" stroke="#e2d6c3"/><text x="580" y="300" font-size="12" font-weight="500" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">17</text>
+    <text x="320" y="322" font-size="12" font-weight="500" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">age (years)</text>
+    <rect x="112" y="54" width="260" height="16" rx="8" fill="var(--acc, #3f607e)" fill-opacity="0.9"/><text x="112" y="48" font-size="12.5" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">Breast buds / chest changes</text><rect x="164" y="100" width="260" height="16" rx="8" fill="var(--acc, #3f607e)" fill-opacity="0.78"/><text x="164" y="94" font-size="12.5" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">Pubic and underarm hair</text><rect x="190" y="146" width="260" height="16" rx="8" fill="var(--acc, #3f607e)" fill-opacity="0.66"/><text x="190" y="140" font-size="12.5" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">Growth spurt</text><rect x="216" y="192" width="260" height="16" rx="8" fill="var(--acc, #3f607e)" fill-opacity="0.54"/><text x="216" y="186" font-size="12.5" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">First period (often ~2 yrs after breast buds)</text><rect x="164" y="238" width="364" height="16" rx="8" fill="var(--acc, #3f607e)" fill-opacity="0.42000000000000004"/><text x="164" y="232" font-size="12.5" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">Skin, sweat and body-odour changes</text>
+    <text x="20" y="22" font-size="12" font-weight="500" text-anchor="start" fill="#6d645b" font-family="var(--serif, Georgia, serif)" font-style="italic">Usual ranges only. Earlier or later can be completely healthy. See ‘When to check in’ below.</text></svg><figcaption>Common ranges for girls and people with a uterus. Periods usually start about two years after breast buds appear.</figcaption></figure></div><div class="block"><h3>The messengers: your hormones</h3></div><div class="block"><div class="prose"><p>Hormones are chemical messengers. They travel in your blood and tell different parts of your body what to do. A small part of the brain (the hypothalamus) and a gland beneath it (the pituitary) start puberty by signalling the ovaries to switch on.</p></div></div><div class="block"><div class="grid g2"><article class="card vocab">
+    <span class="corner">Ovaries</span>
+    <h3 class="term">Oestrogen</h3><span class="say">EES-tro-jen</span>
+    <dl>
+      <div><dt>What it is</dt><dd>Builds the lining of the uterus, and drives breast development, wider hips and changes to skin and discharge.</dd></div>
+      
+      
+      
+      
+    </dl>
+    
+    
+  </article><article class="card vocab">
+    <span class="corner">Ovaries</span>
+    <h3 class="term">Progesterone</h3><span class="say">pro-JES-te-rone</span>
+    <dl>
+      <div><dt>What it is</dt><dd>Rises after ovulation to keep the lining ready. When it drops, the lining sheds and a period starts.</dd></div>
+      
+      
+      
+      
+    </dl>
+    
+    
+  </article><article class="card vocab">
+    <span class="corner">Brain</span>
+    <h3 class="term">FSH and LH</h3>
+    <dl>
+      <div><dt>What it is</dt><dd>Follicle-stimulating hormone and luteinising hormone. They come from the pituitary and tell the ovaries to mature and release an egg.</dd></div>
+      
+      
+      
+      
+    </dl>
+    
+    
+  </article><article class="card vocab">
+    <span class="corner">Everyone</span>
+    <h3 class="term">Testosterone</h3>
+    <dl>
+      <div><dt>What it is</dt><dd>Present in everyone, at different levels. In people with ovaries it contributes to body hair, oily skin and sex drive.</dd></div>
+      
+      
+      
+      
+    </dl>
+    
+    
+  </article></div></div><div class="block"><div class="grid g2"><div class="block"><div class="card"><h3>Changes you might notice</h3><ul><li>Breast buds, which can be tender or uneven at first</li><li>Hair under the arms, on the legs and around the vulva</li><li>A growth spurt, and wider hips</li><li>More sweat and body odour, and oilier skin or pimples</li><li>Clear or white discharge from the vagina, often a few months before the first period</li><li>Stronger or quicker-changing feelings</li></ul></div></div><div class="block"><div class="card"><h3>All of these are normal</h3><ul><li>One breast growing faster than the other</li><li>Stretch marks on hips, thighs or breasts</li><li>Starting earlier or later than your friends</li><li>Discharge that changes through the month</li><li>Feeling awkward in a body that’s changing fast</li></ul></div></div></div></div></section><section class="chapter" id="cycle" aria-labelledby="cycle-h"><div class="ch-head"><span class="ch-num" aria-hidden="true">04</span><p class="eyebrow">Understand</p><h2 id="cycle-h">How a period actually works</h2></div><div class="ch-intro"><p>A period is not the body “getting rid of bad blood”. It’s the uterus shedding a lining it no longer needs. Here’s the whole cycle.</p></div><div class="block"><figure class="diagram"><p class="swipe" aria-hidden="true">Swipe sideways to see the whole diagram →</p><svg class="" viewBox="0 0 640 420" role="img" aria-labelledby="g5t g5d" xmlns="http://www.w3.org/2000/svg" style="max-width:640px"><title id="g5t">Diagram: the menstrual cycle as a wheel</title><desc id="g5d">A circle divided into four phases of an example 28-day cycle: the period (about days 1 to 5), the follicular phase when the lining rebuilds, ovulation around day 14, and the luteal phase from about day 15 to 28. A note explains that cycles of 21 to 45 days are common in teenagers.</desc>
+    <path d="M213.9 60.1A150 150 0 0 1 343.1 140.7" fill="none" stroke="var(--acc, #3f607e)" stroke-opacity="1" stroke-width="30"/><path d="M346.5 147.8A150 150 0 0 1 247.6 355.2" fill="none" stroke="var(--acc, #3f607e)" stroke-opacity="0.75" stroke-width="30" stroke-dasharray="14 6"/><path d="M239.9 357.0A150 150 0 0 1 180.1 357.0" fill="none" stroke="var(--acc, #3f607e)" stroke-opacity="0.5" stroke-width="30"/><path d="M172.4 355.2A150 150 0 0 1 206.1 60.1" fill="none" stroke="var(--acc, #3f607e)" stroke-opacity="0.35" stroke-width="30" stroke-dasharray="3 6"/>
+    <circle cx="210" cy="210" r="86" fill="#fff" stroke="#e2d6c3"/>
+    <text x="210" y="202" font-size="13" font-weight="500" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">An example</text><text x="210" y="230" font-size="22" font-weight="600" text-anchor="middle" fill="#1d1a17" font-family="var(--serif, Georgia, serif)">28-day cycle</text>
+    <text x="210" y="250" font-size="11" font-weight="500" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">day 1 = first day of bleeding</text>
+    <text x="216" y="30" font-size="12" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">Day 1</text>
+    <g>
+      <g transform="translate(410 70)"><rect width="18" height="18" rx="3" fill="var(--acc, #3f607e)" fill-opacity="1"/><text x="30" y="14" font-size="16" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">1. Period</text><text x="30" y="34" font-size="13" font-weight="500" text-anchor="start" fill="#6d645b" font-family="var(--sans, sans-serif)">days 1–5ish</text></g><g transform="translate(410 146)"><rect width="18" height="18" rx="3" fill="var(--acc, #3f607e)" fill-opacity="0.75"/><text x="30" y="14" font-size="16" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">2. Follicular</text><text x="30" y="34" font-size="13" font-weight="500" text-anchor="start" fill="#6d645b" font-family="var(--sans, sans-serif)">lining rebuilds</text></g><g transform="translate(410 222)"><rect width="18" height="18" rx="3" fill="var(--acc, #3f607e)" fill-opacity="0.5"/><text x="30" y="14" font-size="16" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">3. Ovulation</text><text x="30" y="34" font-size="13" font-weight="500" text-anchor="start" fill="#6d645b" font-family="var(--sans, sans-serif)">about day 14*</text></g><g transform="translate(410 298)"><rect width="18" height="18" rx="3" fill="var(--acc, #3f607e)" fill-opacity="0.35"/><text x="30" y="14" font-size="16" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">4. Luteal</text><text x="30" y="34" font-size="13" font-weight="500" text-anchor="start" fill="#6d645b" font-family="var(--sans, sans-serif)">days 15–28</text></g>
+    </g>
+    <text x="410" y="388" font-size="12" font-weight="500" text-anchor="start" fill="#6d645b" font-family="var(--serif, Georgia, serif)" font-style="italic">*In teens, cycles of 21–45 days are common,</text>
+    <text x="410" y="405" font-size="12" font-weight="500" text-anchor="start" fill="#6d645b" font-family="var(--serif, Georgia, serif)" font-style="italic">and ovulation shifts with cycle length.</text></svg><figcaption>Day 1 is the first day of bleeding. “28 days” is an average, not a rule.</figcaption></figure></div><div class="block"><ol class="steps"><li><h3 class="h4">The period (about days 1–5)</h3><p>Progesterone drops, so the lining of the uterus breaks down and leaves through the cervix and vagina as blood and tissue. Bleeding usually lasts 2 to 7 days.</p></li><li><h3 class="h4">The follicular phase</h3><p>FSH tells the ovaries to ripen some eggs. Oestrogen rises, the lining starts to rebuild, and discharge often becomes clearer and stretchier.</p></li><li><h3 class="h4">Ovulation (around the middle)</h3><p>LH surges and one egg is released into a fallopian tube. Some people feel a twinge on one side. This is when pregnancy is most likely.</p></li><li><h3 class="h4">The luteal phase</h3><p>Progesterone keeps the lining ready. If there’s no pregnancy, hormone levels fall, and some people notice sore breasts, bloating or mood changes (PMS) before the next period.</p></li></ol></div><div class="block"><div class="grid g3"><div class="block"><div class="card"><p class="eyebrow">How long</p><h3>21 to 45 days</h3><p>The time from the first day of one period to the first day of the next. Cycles are often irregular for the first year or two after periods start.</p></div></div><div class="block"><div class="card"><p class="eyebrow">How much</p><h3>A few tablespoons</h3><p>It looks like more, but most of a period is only a few tablespoons of fluid across the whole thing. Blood mixes with tissue and mucus.</p></div></div><div class="block"><div class="card"><p class="eyebrow">What colour</p><h3>Red to brown</h3><p>Bright red, dark red and brown are all normal. Brown is older blood. Small clots can be normal too. Clots bigger than a 50-cent coin are worth mentioning to a GP.</p></div></div></div></div><div class="block"><h3>Period products</h3></div><div class="block"><div class="tbl-wrap"><table><caption class="sr-only">Period products compared</caption><thead><tr><th scope="col">Product</th><th scope="col">How it works</th><th scope="col">Good to know</th></tr></thead><tbody><tr><th scope="row" style="font-weight:700;color:var(--ink)">Pads</th><td>Stick to underwear and absorb blood.</td><td>Change every 3 to 6 hours or when full. A good first product.</td></tr><tr><th scope="row" style="font-weight:700;color:var(--ink)">Tampons</th><td>Sit inside the vagina and absorb blood.</td><td>Use the lowest absorbency you need and change every 4 to 8 hours. Never leave one in longer than 8 hours.</td></tr><tr><th scope="row" style="font-weight:700;color:var(--ink)">Menstrual cups and discs</th><td>Sit inside and collect blood. Empty, rinse, reuse.</td><td>Can stay in for up to 12 hours. Sizing matters, so check the brand’s guide.</td></tr><tr><th scope="row" style="font-weight:700;color:var(--ink)">Period underwear</th><td>Underwear with an absorbent layer.</td><td>Reusable. Good for light days, overnight, or as back-up.</td></tr></tbody></table></div></div><div class="block"><div class="callout urgent"><span class="ic" aria-hidden="true">!</span><div><h3 class="h4">Toxic shock syndrome (TSS): rare, but know the signs</h3><p>TSS is a rare but serious illness linked to tampons and cups. If you suddenly get a high fever, vomiting or diarrhoea, a rash that looks like sunburn, dizziness or fainting while using one: take it out and get urgent medical help straight away. In an emergency, call 000.</p></div></div></div><div class="block"><article class="scenario"><span class="tag">Scenario</span><h3>Maya and the cramps no one explained</h3><p>Maya is 13. On the first day of her period she gets a deep, dragging ache low in her tummy and her lower back. She’s heard “cramps” before, but she thought it meant something small, and she wonders if something’s wrong.</p><p>In her health notes she finds the answer: during a period the uterus, which is a muscle, squeezes to push the lining out. Chemicals called prostaglandins cause those contractions, and they can make you feel sore, and sometimes a bit sick or loose in the tummy. It’s common. Heat packs, gentle movement and period pain relief from a pharmacist often help.</p><p>She also reads the other half: pain that stops you going to school, or doesn’t get better with the usual things, is worth talking to a GP about. She files that away.</p><small class="fic">Maya is fictional. You’ll meet her again in the later editions of this archive.</small></article></div></section><section class="chapter" id="normalise" aria-labelledby="normalise-h"><div class="ch-head"><span class="ch-num" aria-hidden="true">05</span><p class="eyebrow">Normalise</p><h2 id="normalise-h">Myths, facts, and the things people whisper</h2></div><div class="ch-intro"><p>Myths stick around because nobody corrects them out loud. So let’s.</p></div><div class="block"><div class="grid g2"><div class="mf"><div class="myth"><span class="lbl">Myth</span><p>You can’t swim or play sport on your period.</p></div><div class="fact"><span class="lbl">Fact</span><p>You can do anything you usually do. Tampons, cups and period swimwear make swimming easy, and exercise can ease cramps.</p></div></div><div class="mf"><div class="myth"><span class="lbl">Myth</span><p>Using a tampon means you’re not a virgin anymore.</p></div><div class="fact"><span class="lbl">Fact</span><p>Tampons don’t change anything about virginity. Virginity is a social idea, not a body part, and the hymen stretches naturally.</p></div></div><div class="mf"><div class="myth"><span class="lbl">Myth</span><p>Period blood is dirty or unhygienic.</p></div><div class="fact"><span class="lbl">Fact</span><p>It’s blood and tissue from the uterus, not waste. It’s no dirtier than blood from a cut.</p></div></div><div class="mf"><div class="myth"><span class="lbl">Myth</span><p>You can’t get pregnant on your period.</p></div><div class="fact"><span class="lbl">Fact</span><p>It’s less likely, but possible, especially with short or irregular cycles. Periods are not contraception.</p></div></div><div class="mf"><div class="myth"><span class="lbl">Myth</span><p>PMS is just an excuse to be moody.</p></div><div class="fact"><span class="lbl">Fact</span><p>Hormone changes before a period can cause real physical and emotional symptoms. They’re recognised by doctors.</p></div></div><div class="mf"><div class="myth"><span class="lbl">Myth</span><p>Bad period pain is just something you have to put up with.</p></div><div class="fact"><span class="lbl">Fact</span><p>Some pain is common. Pain that stops you living your life is not something to put up with, and it’s worth seeing a GP.</p></div></div><div class="mf"><div class="myth"><span class="lbl">Myth</span><p>Discharge means something is wrong.</p></div><div class="fact"><span class="lbl">Fact</span><p>Clear or white discharge is normal and keeps the vagina healthy. It changes through your cycle.</p></div></div><div class="mf"><div class="myth"><span class="lbl">Myth</span><p>Everyone’s periods sync up when they live together.</p></div><div class="fact"><span class="lbl">Fact</span><p>Research hasn’t shown that periods reliably sync. Cycles vary, so they sometimes line up by chance.</p></div></div></div></div><div class="block"><h3>Say it plainly</h3></div><div class="block"><div class="prose"><p>Families and cultures have lots of nicknames for periods and bodies, and that’s fine at home. At the doctor, the real word saves time and gets you taken seriously. Here are a few swaps.</p></div></div><div class="block"><div class="tbl-wrap"><table><caption class="sr-only">Everyday words and their medical names</caption><thead><tr><th scope="col">What people sometimes say</th><th scope="col">The word a doctor uses</th><th scope="col">Meaning</th></tr></thead><tbody><tr><th scope="row" style="font-weight:700;color:var(--ink)">“Down there”</th><td>Vulva / vagina</td><td>Outside parts / the internal canal</td></tr><tr><th scope="row" style="font-weight:700;color:var(--ink)">“That time of the month”</th><td>Period, menstruation</td><td>The bleeding part of the cycle</td></tr><tr><th scope="row" style="font-weight:700;color:var(--ink)">“Women’s problems”</th><td>Gynaecological symptoms</td><td>Anything to do with the reproductive organs</td></tr><tr><th scope="row" style="font-weight:700;color:var(--ink)">“My tummy hurts”</th><td>Pelvic pain, period pain</td><td>Pain low in the belly, between the hips</td></tr><tr><th scope="row" style="font-weight:700;color:var(--ink)">“Spotting”</th><td>Bleeding between periods</td><td>Light bleeding outside your period</td></tr></tbody></table></div></div><div class="block"><div class="reflect"><span class="tag">Reflect</span><h3 style="margin:.3rem 0 .3rem">Your turn</h3><ol><li>What’s one thing about your body that you were never told, and wish you had been?</li><li>What word for a body part feels awkward to say? Try saying it out loud once. Nothing happens.</li></ol></div></div></section><section class="chapter" id="check-in" aria-labelledby="check-in-h"><div class="ch-head"><span class="ch-num" aria-hidden="true">06</span><p class="eyebrow">Normalise</p><h2 id="check-in-h">What’s normal, and when to check in</h2></div><div class="ch-intro"><p>Bodies vary a lot, and most changes are healthy. These are the signs that it’s worth talking to a GP or school nurse. You’re not overreacting by asking.</p></div><div class="block"><div class="levels"><div class="level l1"><span class="lv">Common</span><h3 class="h4">Usually normal</h3><ul><li>Irregular periods in the first 1–2 years</li><li>Mild cramps that ease with heat or pain relief</li><li>Discharge that changes through the month</li><li>Sore breasts or bloating before a period</li></ul></div><div class="level l2"><span class="lv">Book a GP</span><h3 class="h4">Worth checking</h3><ul><li>No period by 15, or none 3 years after breast buds</li><li>Signs of puberty before 8</li><li>Periods that stop for 3 months or more</li><li>Cycles shorter than 21 or longer than 45 days</li><li>Bleeding for more than 7 days</li><li>Changing a pad or tampon every 1–2 hours</li><li>Pain that makes you miss school or plans</li><li>Bleeding between periods</li></ul></div><div class="level l3"><span class="lv">Get help now</span><h3 class="h4">Urgent</h3><ul><li>Soaking a pad or tampon every hour for several hours, or feeling faint or dizzy</li><li>Sudden, severe pain in your tummy or pelvis</li><li>TSS signs: high fever, rash, vomiting while using a tampon or cup</li><li>Call 000 in an emergency, or healthdirect on 1800 022 222 for advice</li></ul></div></div></div><div class="block"><div class="callout"><span class="ic" aria-hidden="true">✓</span><div><h3 class="h4">Going to the GP about your period is normal</h3><p>GPs talk about periods every day. You can go on your own from about 14 or 15, and in many situations what you say can be kept confidential. Later editions of this pack go much further into how to explain what’s happening and what to ask.</p></div></div></div></section>
+      <div style="margin-top:clamp(36px,5vw,64px)"><section class="next" aria-labelledby="next-h"><p class="eyebrow">Where this idea went next</p><h2 id="next-h">From knowing your body to the rest of our work</h2><p>Plain, accurate body knowledge is still where Aletheia starts. It became the Health Literacy pillar, it shapes our digital health education, and it sits inside every Empower Pack alongside first-period essentials.</p><div class="links"><a href="/five-pillars/">Five Pillars<span>Health Literacy 101 is the first of them</span></a><a href="/our-work/digital-health-education/">Digital Health Education<span>Plain-language articles and myth-busting</span></a><a href="/our-work/empower-packs/">Empower Packs<span>Voice Packs with period and health essentials</span></a><a href="/our-work/voice-packs/archive/find-the-words/">Next: Archive Edition 02<span>Knowing your body was not enough on its own</span></a></div></section></div>
+      <nav class="pager no-print" aria-label="Other editions"><a href="/our-work/voice-packs/archive/"><small>Previous</small>The Voice Pack Archive</a><a href="/our-work/voice-packs/archive/find-the-words/"><small>Next</small>Edition 02 · Find the Words</a></nav>
+      <footer class="rfoot">
+  <p><strong style="color:var(--ink)">Health education, not medical advice.</strong> This pack explains general health information so you can understand your body and talk about it. It cannot diagnose you. If you're worried about your health, speak to a doctor, nurse or other health professional. <strong style="color:var(--ink)">In an emergency, call 000.</strong></p>
+  <div class="help"><div><strong>Emergency · 000</strong>If you or someone else is in danger or needs urgent medical help.</div><div><strong>Kids Helpline · 1800 55 1800</strong>Free, 24/7 phone and webchat, ages 5–25.</div><div><strong>Lifeline · 13 11 14</strong>24/7 crisis support. Text 0477 13 11 14.</div><div><strong>headspace · headspace.org.au</strong>Free or low-cost support, ages 12–25.</div></div>
+  <details><summary>Sources and fact-checking (6)</summary><ol><li><a href="https://www.rch.org.au/teeninfo/fact-sheets/Periods_%E2%80%93_owning_your_cycle/" target="_blank" rel="noopener">Royal Children’s Hospital Melbourne, Teen Health Info: Periods – owning your cycle</a></li><li><a href="https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2015/12/menstruation-in-girls-and-adolescents-using-the-menstrual-cycle-as-a-vital-sign" target="_blank" rel="noopener">ACOG Committee Opinion 651: Menstruation in girls and adolescents, using the menstrual cycle as a vital sign</a></li><li><a href="https://www.acog.org/womens-health/faqs/heavy-menstrual-bleeding" target="_blank" rel="noopener">ACOG: Heavy menstrual bleeding (patient FAQ)</a></li><li><a href="https://www.hopkinsmedicine.org/health/wellness-and-prevention/the-stages-of-puberty-for-girls" target="_blank" rel="noopener">Johns Hopkins Medicine: The stages of puberty for girls</a></li><li><a href="https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/menstrual-cycle" target="_blank" rel="noopener">Better Health Channel (Victorian Government): The menstrual cycle</a></li><li><a href="https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/toxic-shock-syndrome-tss" target="_blank" rel="noopener">Better Health Channel: Toxic shock syndrome</a></li></ol></details>
+  <p style="margin-top:1rem">Written and designed by The Aletheia Project resource development team. Scenarios are fictional. We acknowledge the Wurundjeri Woi-wurrung people of the Kulin Nation, where Aletheia was founded. Sovereignty was never ceded.</p>
+</footer>
+    </article>
+  </div>
+</div>
+</div>
+<script>(function(){var root=document.currentScript&&document.currentScript.previousElementSibling;if(!root||!root.classList.contains('avp'))root=document.querySelector('.avp');if(!root)return;
+var bar=root.querySelector('.progress span'),main=root.querySelector('.pack-main');
+if(bar&&main){var t=false;function upd(){var r=main.getBoundingClientRect(),h=r.height-window.innerHeight;var p=h>0?Math.min(1,Math.max(0,-r.top/h)):0;bar.style.width=(p*100).toFixed(1)+'%';t=false}window.addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(upd)}},{passive:true});upd()}
+var links=root.querySelectorAll('[data-toc]');if(links.length&&'IntersectionObserver'in window){var map={};links.forEach(function(a){map[a.getAttribute('data-toc')]=a});var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current')});var a=map[e.target.id];if(a)a.setAttribute('aria-current','true')}})},{rootMargin:'-20% 0px -70% 0px'});root.querySelectorAll('.chapter[id]').forEach(function(s){io.observe(s)})}
+root.querySelectorAll('.toc-mobile a').forEach(function(a){a.addEventListener('click',function(){var d=a.closest('details');if(d)d.open=false})});})();</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Know Your Body","description":"Archive Edition 01 of the Aletheia Voice Pack: plain, shame-free health education on anatomy, puberty, hormones and periods, with myth-busting and clear signs for when to see a GP.","url":"https://thealetheiaproject.org/our-work/voice-packs/archive/know-your-body/","inLanguage":"en-AU","educationalLevel":"Young people aged 12–25","learningResourceType":"Health literacy resource","isAccessibleForFree":true,"publisher":{"@type":"NGO","name":"The Aletheia Project","url":"https://thealetheiaproject.org"}}</script>

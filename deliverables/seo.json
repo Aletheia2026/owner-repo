@@ -1,0 +1,90 @@
+[
+  {
+    "page": "Know Your Body",
+    "url": "/our-work/voice-packs/archive/know-your-body/",
+    "preview": "/our-work/voice-packs/archive/know-your-body/",
+    "section": false,
+    "seoTitle": "Know Your Body: Voice Pack Archive Edition 01 · The Aletheia Project",
+    "description": "Archive Edition 01 of the Aletheia Voice Pack: plain, shame-free health education on anatomy, puberty, hormones and periods, with myth-busting and clear signs for when to see a GP.",
+    "socialImage": "voice-pack-archive-01-og.png",
+    "wordpressFile": "dist/wordpress/voice-pack-archive-01-know-your-body.html",
+    "pdf": "Aletheia-Voice-Pack-Archive-Edition-01-Know-Your-Body.pdf"
+  },
+  {
+    "page": "Find the Words",
+    "url": "/our-work/voice-packs/archive/find-the-words/",
+    "preview": "/our-work/voice-packs/archive/find-the-words/",
+    "section": false,
+    "seoTitle": "Find the Words: Voice Pack Archive Edition 02 · The Aletheia Project",
+    "description": "Archive Edition 02 of the Aletheia Voice Pack: how to notice what’s normal for you, describe symptoms clearly (what, where, when, how much), track patterns and prepare for a GP appointment.",
+    "socialImage": "voice-pack-archive-02-og.png",
+    "wordpressFile": "dist/wordpress/voice-pack-archive-02-find-the-words.html",
+    "pdf": "Aletheia-Voice-Pack-Archive-Edition-02-Find-the-Words.pdf"
+  },
+  {
+    "page": "Use Your Voice",
+    "url": "/our-work/voice-packs/archive/use-your-voice/",
+    "preview": "/our-work/voice-packs/archive/use-your-voice/",
+    "section": false,
+    "seoTitle": "Use Your Voice: Voice Pack Archive Edition 03 · The Aletheia Project",
+    "description": "Archive Edition 03 of the Aletheia Voice Pack: recognising medical dismissal, preparing for appointments, conversation scripts, navigating Australian healthcare, your rights (consent, confidentiality, interpreters) and inclusive care.",
+    "socialImage": "voice-pack-archive-03-og.png",
+    "wordpressFile": "dist/wordpress/voice-pack-archive-03-use-your-voice.html",
+    "pdf": "Aletheia-Voice-Pack-Archive-Edition-03-Use-Your-Voice.pdf"
+  },
+  {
+    "page": "From Voice to Change",
+    "url": "/our-work/voice-packs/archive/from-voice-to-change/",
+    "preview": "/our-work/voice-packs/archive/from-voice-to-change/",
+    "section": false,
+    "seoTitle": "From Voice to Change: Voice Pack Archive Edition 04 · The Aletheia Project",
+    "description": "Archive Edition 04 of the Aletheia Voice Pack: recognising when individual experiences form a pattern, sharing lived experience safely, and how young people can influence schools, services and policy.",
+    "socialImage": "voice-pack-archive-04-og.png",
+    "wordpressFile": "dist/wordpress/voice-pack-archive-04-from-voice-to-change.html",
+    "pdf": "Aletheia-Voice-Pack-Archive-Edition-04-From-Voice-to-Change.pdf"
+  },
+  {
+    "page": "Heard. Understood. Me.",
+    "url": "/our-work/voice-packs/heard-understood-me/",
+    "preview": "/our-work/voice-packs/heard-understood-me/",
+    "section": false,
+    "seoTitle": "Heard. Understood. Me. The Aletheia Voice Pack (April 2026) · The Aletheia Project",
+    "description": "The current Aletheia Voice Pack: a youth-designed health literacy and self-advocacy toolkit for young people in Australia. Health words, your symptom story, what to say when you’re dismissed, your rights, and how to turn experience into change.",
+    "socialImage": "voice-pack-current-og.png",
+    "wordpressFile": "dist/wordpress/voice-pack-current-edition-heard-understood-me.html",
+    "pdf": "Aletheia-Voice-Pack-April-2026-Heard-Understood-Me.pdf"
+  },
+  {
+    "page": "The Voice Pack Archive",
+    "url": "/our-work/voice-packs/archive/",
+    "preview": "/our-work/voice-packs/archive/",
+    "section": false,
+    "seoTitle": "The Voice Pack Archive · The Aletheia Project",
+    "description": "Four earlier editions of the Aletheia Voice Pack, showing how our approach to youth health grew from body knowledge to language, self-advocacy and youth-led systems change, and led to today’s Voice Pack.",
+    "socialImage": "voice-pack-archive-og.png",
+    "wordpressFile": "dist/wordpress/voice-pack-archive-landing.html",
+    "pdf": null
+  },
+  {
+    "page": "Voice Packs page: current edition feature",
+    "url": "/our-work/voice-packs/#current-edition",
+    "preview": "/_sections/voice-packs-current-feature/",
+    "section": true,
+    "seoTitle": "Voice Packs page: current edition feature · The Aletheia Project",
+    "description": "Section for the top of the Voice Packs page featuring the current edition.",
+    "socialImage": "voice-pack-current-og.png",
+    "wordpressFile": "dist/wordpress/voice-packs-page-section-1-current-edition.html",
+    "pdf": null
+  },
+  {
+    "page": "Voice Packs page: archive teaser",
+    "url": "/our-work/voice-packs/#archive",
+    "preview": "/_sections/voice-packs-archive-teaser/",
+    "section": true,
+    "seoTitle": "Voice Packs page: archive teaser · The Aletheia Project",
+    "description": "Section for near the end of the Voice Packs page showing the archive.",
+    "socialImage": "voice-pack-archive-og.png",
+    "wordpressFile": "dist/wordpress/voice-packs-page-section-2-archive-teaser.html",
+    "pdf": null
+  }
+]

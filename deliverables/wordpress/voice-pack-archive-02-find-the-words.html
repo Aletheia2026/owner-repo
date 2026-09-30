@@ -1,0 +1,703 @@
+<!-- Aletheia Voice Packs · Find the Words · generated file, edit the source in the repo and rebuild -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap" rel="stylesheet">
+<style>/* ==========================================================================
+   Aletheia Voice Packs: archive + current edition
+   Everything is scoped under .avp so it can sit inside an Elementor HTML
+   widget on the Qi theme without touching the rest of the site.
+   ========================================================================== */
+
+.avp {
+  /* Aletheia core palette (site-wide) */
+  --cream: #f6efe3;
+  --paper: #fbf8f1;
+  --ink: #1d1a17;
+  --ink-2: #4a423b;
+  --muted: #6d645b;
+  --line: #e2d6c3;
+  --red: #b3322b;
+  --red-deep: #8f2620;
+  --gold: #c49a45;
+  --gold-soft: #efe0bd;
+  --night: #1d1a17;
+
+  /* Edition accent: overridden per edition below */
+  --acc: var(--red);
+  --acc-ink: #fff;
+  --acc-soft: #f6dcd6;
+
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --measure: 68ch;
+  --radius: 14px;
+  --gutter: clamp(16px, 4vw, 40px);
+
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: clamp(16px, 1.05vw + 12px, 18px);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
+}
+.avp *, .avp *::before, .avp *::after { box-sizing: border-box; }
+.avp img, .avp svg { max-width: 100%; height: auto; display: block; }
+.avp p, .avp ul, .avp ol, .avp h1, .avp h2, .avp h3, .avp h4, .avp figure, .avp blockquote { margin: 0; }
+.avp p + p, .avp p + ul, .avp ul + p { margin-top: .9em; }
+.avp ul, .avp ol { padding-left: 1.2em; }
+.avp li + li { margin-top: .35em; }
+.avp h1, .avp h2, .avp h3, .avp h4 { font-family: var(--serif); font-weight: 600; line-height: 1.12; letter-spacing: -.01em; color: inherit; }
+.avp h1 { font-size: clamp(2.3rem, 6vw, 4.6rem); }
+.avp h2 { font-size: clamp(1.75rem, 3.6vw, 2.7rem); }
+.avp h3 { font-size: clamp(1.2rem, 1.8vw, 1.45rem); }
+.avp h4, .avp h3.h4 { font-size: 1.05rem; font-family: var(--sans); font-weight: 700; letter-spacing: 0; line-height: 1.3; }
+.avp em { font-style: italic; }
+.avp strong { font-weight: 700; }
+.avp a { color: var(--red); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 2px; }
+.avp a:hover { color: var(--red-deep); }
+.avp a:focus-visible, .avp button:focus-visible, .avp summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+.avp .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+.avp .wrap { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 var(--gutter); }
+.avp .narrow { max-width: 780px; }
+.avp .prose { max-width: var(--measure); }
+.avp .prose p, .avp .prose li { color: var(--ink-2); }
+.avp .lede { font-size: 1.15em; color: var(--ink-2); max-width: 60ch; }
+.avp .eyebrow { font-family: var(--sans); font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--acc); }
+.avp .section { padding: clamp(56px, 8vw, 104px) 0; }
+.avp .grid { display: grid; gap: clamp(14px, 2vw, 22px); }
+.avp .g2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+.avp .g3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
+.avp .g4 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); }
+.avp .stack > * + * { margin-top: 1rem; }
+
+/* ---------- buttons ---------- */
+.avp .btn { display: inline-flex; align-items: center; gap: .5em; padding: .8em 1.3em; border-radius: 999px; background: var(--red); color: #fff; font-weight: 700; text-decoration: none; border: 2px solid var(--red); line-height: 1.2; }
+.avp .btn:hover { background: var(--red-deep); border-color: var(--red-deep); color: #fff; }
+.avp .btn.ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
+.avp .btn.ghost:hover { background: var(--ink); color: var(--cream); }
+.avp .btn.light { background: var(--cream); color: var(--ink); border-color: var(--cream); }
+.avp .btn.light:hover { background: #fff; color: var(--ink); }
+.avp .btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 1.5rem; }
+
+/* ---------- tags / badges ---------- */
+.avp .tags { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 0; }
+.avp .tags li { margin: 0; font-size: .74rem; font-weight: 700; letter-spacing: .04em; padding: .3em .7em; border-radius: 999px; background: var(--paper); border: 1px solid var(--line); color: var(--ink-2); }
+.avp .badge { display: inline-flex; align-items: center; gap: .5em; font-size: .72rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; padding: .45em .85em; border-radius: 4px; background: var(--ink); color: var(--cream); }
+.avp .badge.current { background: var(--red); color: #fff; }
+.avp .badge .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.avp .badge.current .dot { animation: avp-pulse 2.4s ease-in-out infinite; }
+@keyframes avp-pulse { 50% { opacity: .35; } }
+
+/* ---------- hero ---------- */
+.avp .hero { position: relative; padding: clamp(48px, 8vw, 110px) 0 clamp(40px, 6vw, 80px); overflow: hidden; }
+.avp .hero .wrap { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(24px, 5vw, 64px); align-items: center; }
+.avp .hero h1 { margin: .35em 0 .3em; }
+.avp .hero .q { font-family: var(--serif); font-style: italic; font-size: clamp(1.15rem, 2vw, 1.45rem); color: var(--ink-2); }
+.avp .hero .meta { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 1.4rem; font-size: .86rem; color: var(--muted); }
+.avp .hero .art { position: relative; }
+.avp .hero .art svg { width: 100%; }
+@media (max-width: 820px) { .avp .hero .wrap { grid-template-columns: 1fr; } .avp .hero .art { max-width: 420px; } }
+
+/* ---------- framework strip (LEARN / UNDERSTAND / ...) ---------- */
+.avp .frame { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 1.2rem 0 0; counter-reset: fr; }
+.avp .frame li { margin: 0; counter-increment: fr; display: flex; align-items: center; gap: .55em; font-weight: 700; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; padding: .5em .85em; border: 1.5px solid var(--acc); border-radius: 6px; color: var(--ink); background: var(--paper); }
+.avp .frame li::before { content: counter(fr, decimal-leading-zero); color: var(--acc); font-size: .72rem; }
+
+/* ---------- contents + progress ---------- */
+.avp .layout > * { min-width: 0; }
+.avp .layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: start; }
+.avp .toc { position: sticky; top: 96px; font-size: .9rem; }
+.avp .toc h2 { font-family: var(--sans); font-size: .75rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: .8rem; }
+.avp .toc ol { list-style: none; padding: 0; margin: 0; border-left: 2px solid var(--line); }
+.avp .toc li { margin: 0; }
+.avp .toc a { display: block; padding: .42em 0 .42em 1em; margin-left: -2px; border-left: 2px solid transparent; color: var(--ink-2); font-weight: 500; text-decoration: none; line-height: 1.35; }
+.avp .toc a .n { display: inline-block; min-width: 2em; color: var(--acc); font-weight: 700; font-size: .8em; }
+.avp .toc a:hover, .avp .toc a[aria-current="true"] { color: var(--ink); border-left-color: var(--acc); font-weight: 700; }
+.avp .progress { position: sticky; top: 0; z-index: 5; height: 4px; background: transparent; }
+.avp .progress span { display: block; height: 100%; width: 0; background: var(--acc); transition: width .1s linear; }
+.avp .toc-mobile { display: none; }
+@media (max-width: 960px) {
+  .avp .layout { grid-template-columns: minmax(0, 1fr); }
+  .avp .toc { display: none; }
+  .avp .toc-mobile { display: block; margin: 0 0 2rem; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); }
+  .avp .toc-mobile summary { cursor: pointer; padding: 1em 1.1em; font-weight: 700; list-style: none; display: flex; justify-content: space-between; }
+  .avp .toc-mobile summary::after { content: "+"; font-size: 1.3em; line-height: 1; }
+  .avp .toc-mobile[open] summary::after { content: "–"; }
+  .avp .toc-mobile ol { margin: 0; padding: 0 1.1em 1em 2.2em; }
+}
+
+/* ---------- chapters ---------- */
+.avp .chapter { padding: clamp(40px, 6vw, 72px) 0; border-top: 1px solid var(--line); scroll-margin-top: 80px; }
+.avp .pack-main > .chapter:first-of-type { border-top: 0; padding-top: 0; }
+.avp .ch-head { display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; align-items: end; margin-bottom: 1.6rem; }
+.avp .ch-num { grid-row: span 2; font-family: var(--serif); font-size: clamp(3rem, 7vw, 5rem); line-height: .85; color: var(--acc); font-weight: 300; }
+.avp .ch-head .eyebrow { align-self: end; }
+.avp .ch-head h2 { grid-column: 2; }
+.avp .ch-intro { max-width: var(--measure); color: var(--ink-2); font-size: 1.06em; }
+.avp .block { margin-top: clamp(22px, 3vw, 34px); }
+.avp .block > h3 { margin-bottom: .6rem; }
+
+/* ---------- cards ---------- */
+.avp .card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(18px, 2.4vw, 26px); }
+.avp .card h3, .avp .card h4 { margin-bottom: .4rem; }
+.avp .card p, .avp .card li { font-size: .95em; color: var(--ink-2); }
+.avp .card.tint { background: var(--acc-soft); border-color: transparent; }
+.avp .card.dark { background: var(--night); color: var(--cream); border-color: var(--night); }
+.avp .card.dark p, .avp .card.dark li { color: #e9dfcf; }
+.avp .card.dark a { color: var(--gold-soft); }
+
+/* vocabulary card */
+.avp .vocab { position: relative; }
+.avp .vocab .term { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; }
+.avp .vocab .say { display: block; font-size: .78rem; color: var(--muted); margin: .1em 0 .6em; letter-spacing: .02em; }
+.avp .vocab dl { margin: .6rem 0 0; display: grid; gap: .5rem; }
+.avp .vocab dt { font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--acc); }
+.avp .vocab dd { margin: 0; font-size: .95em; color: var(--ink-2); }
+.avp .vocab .corner { position: absolute; top: 14px; right: 14px; font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+
+/* myth / fact */
+.avp .mf { display: grid; grid-template-columns: 1fr 1fr; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); }
+.avp .mf > div { padding: 18px 20px; }
+.avp .mf .myth { background: var(--paper); }
+.avp .mf .fact { background: var(--acc-soft); }
+.avp .mf .lbl { display: block; font-size: .7rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; margin-bottom: .35rem; }
+.avp .mf .myth .lbl { color: var(--muted); }
+.avp .mf .myth p { text-decoration: line-through; text-decoration-color: rgba(179,50,43,.55); text-decoration-thickness: 2px; color: var(--ink-2); font-family: var(--serif); font-size: 1.05em; }
+.avp .mf .fact .lbl { color: var(--acc); }
+.avp .mf .fact p { color: var(--ink); font-size: .95em; }
+@media (max-width: 620px) { .avp .mf { grid-template-columns: 1fr; } }
+
+/* words you can use */
+.avp .say-list { list-style: none; padding: 0; margin: .5rem 0 0; display: grid; gap: 8px; }
+.avp .say-list li { margin: 0; position: relative; padding: .7em 1em .7em 2.4em; background: #fff; border: 1px solid var(--line); border-radius: 12px 12px 12px 3px; font-family: var(--serif); font-size: 1.02em; color: var(--ink); }
+.avp .say-list li::before { content: "\201C"; position: absolute; left: .55em; top: .05em; font-size: 2em; color: var(--acc); font-family: var(--serif); line-height: 1.2; }
+.avp .say-head, .avp .card .say-head { font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--acc); margin-top: 1rem; }
+
+/* dialogue / script */
+.avp .script { display: grid; gap: 10px; margin-top: .6rem; }
+.avp .line { display: grid; grid-template-columns: 92px 1fr; gap: 12px; align-items: start; }
+.avp .line .who { font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); padding-top: .75em; text-align: right; }
+.avp .line .bub { padding: .7em 1em; border-radius: 14px; background: #fff; border: 1px solid var(--line); }
+.avp .line.them .bub { background: #efe8dc; font-style: italic; color: var(--ink-2); }
+.avp .line.you .bub { background: var(--acc); color: var(--acc-ink); border-color: var(--acc); font-weight: 500; }
+.avp .line.note .bub { background: transparent; border: 1.5px dashed var(--line); font-size: .9em; color: var(--ink-2); }
+@media (max-width: 560px) { .avp .line { grid-template-columns: 1fr; gap: 4px; } .avp .line .who { text-align: left; padding: 0; } }
+
+/* scenario */
+.avp .scenario { position: relative; background: #fff; border: 1px solid var(--line); border-left: 5px solid var(--acc); border-radius: 6px var(--radius) var(--radius) 6px; padding: clamp(18px, 2.6vw, 28px); }
+.avp .scenario .tag { font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--acc); }
+.avp .scenario h3 { margin: .3rem 0 .6rem; }
+.avp .scenario p { color: var(--ink-2); }
+.avp .scenario .fic { display: block; margin-top: .9rem; font-size: .76rem; color: var(--muted); }
+
+/* reflection */
+.avp .reflect { background: var(--paper); border: 1.5px dashed var(--acc); border-radius: var(--radius); padding: clamp(18px, 2.6vw, 28px); }
+.avp .reflect .tag { font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--acc); }
+.avp .reflect ol, .avp .reflect ul { margin-top: .6rem; }
+.avp .reflect li { font-family: var(--serif); font-size: 1.05em; }
+.avp .reflect .lines { margin-top: 1rem; height: 88px; background: repeating-linear-gradient(to bottom, transparent 0 27px, var(--line) 27px 29px); }
+
+/* callouts */
+.avp .callout { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: start; padding: 18px 20px; border-radius: var(--radius); background: var(--paper); border: 1px solid var(--line); }
+.avp .callout .ic { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: var(--acc); color: var(--acc-ink); font-weight: 700; font-family: var(--serif); }
+.avp .callout.urgent { background: #fff4f1; border-color: #eab7ae; }
+.avp .callout.urgent .ic { background: var(--red); color: #fff; }
+.avp .callout h3.h4, .avp .callout h4 { margin-bottom: .25rem; }
+.avp .callout p, .avp .callout li { font-size: .95em; color: var(--ink-2); }
+
+/* three-tier care levels */
+.avp .levels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.avp .level { border-radius: var(--radius); padding: 18px 20px; border: 1px solid var(--line); background: var(--paper); }
+.avp .level .lv { display: inline-block; font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; padding: .25em .6em; border-radius: 4px; margin-bottom: .6rem; }
+.avp .level.l1 .lv { background: #e6ecdf; color: #2f4d24; }
+.avp .level.l2 .lv { background: var(--gold-soft); color: #6b4c10; }
+.avp .level.l3 { background: #fff4f1; border-color: #eab7ae; }
+.avp .level.l3 .lv { background: var(--red); color: #fff; }
+.avp .level h3.h4, .avp .level h4 { margin-bottom: .35rem; }
+.avp .level ul { font-size: .92em; color: var(--ink-2); }
+@media (max-width: 820px) { .avp .levels { grid-template-columns: 1fr; } }
+
+/* pathway / steps */
+.avp .steps { list-style: none; padding: 0; margin: .6rem 0 0; counter-reset: st; display: grid; gap: 0; }
+.avp .steps > li { counter-increment: st; position: relative; margin: 0; padding: 0 0 1.4rem 3.2rem; }
+.avp .steps > li::before { content: counter(st); position: absolute; left: 0; top: 0; width: 2.2rem; height: 2.2rem; border-radius: 50%; display: grid; place-items: center; background: var(--acc); color: var(--acc-ink); font-weight: 700; font-family: var(--serif); }
+.avp .steps > li::after { content: ""; position: absolute; left: 1.05rem; top: 2.4rem; bottom: .2rem; width: 2px; background: var(--line); }
+.avp .steps > li:last-child::after { display: none; }
+.avp .steps h3.h4, .avp .steps h4 { margin: .3rem 0 .2rem; }
+.avp .steps p, .avp .steps li li { color: var(--ink-2); font-size: .95em; }
+
+/* checklist */
+.avp .check { list-style: none; padding: 0; margin: .5rem 0 0; }
+.avp .check li { position: relative; padding-left: 1.9em; margin: .45em 0; color: var(--ink-2); }
+.avp .check li::before { content: ""; position: absolute; left: 0; top: .25em; width: 1.05em; height: 1.05em; border: 2px solid var(--acc); border-radius: 4px; background: #fff; }
+
+/* table */
+.avp .tbl-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
+.avp table { width: 100%; border-collapse: collapse; font-size: .92em; min-width: 560px; }
+.avp th, .avp td { text-align: left; vertical-align: top; padding: .8em 1em; border-bottom: 1px solid var(--line); }
+.avp thead th { background: var(--paper); font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.avp tbody tr:last-child td { border-bottom: 0; }
+.avp td strong { color: var(--ink); }
+
+/* figure / diagram */
+.avp figure.diagram { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(14px, 2.5vw, 28px); }
+.avp figure.diagram figcaption { margin-top: .8rem; font-size: .85rem; color: var(--muted); }
+.avp figure.diagram svg { margin: 0 auto; }
+.avp figure.diagram .swipe { display: none; }
+@media (max-width: 600px) {
+  .avp figure.diagram { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .avp figure.diagram svg { min-width: 500px; }
+  .avp figure.diagram figcaption { position: sticky; left: 0; max-width: calc(100vw - 64px); }
+  .avp figure.diagram .swipe { display: block; position: sticky; left: 0; font-size: .75rem; font-weight: 700; color: var(--muted); margin: 0 0 .5rem; }
+}
+.avp .svg-text { font-family: var(--sans); }
+
+/* pull quote */
+.avp .pull { font-family: var(--serif); font-size: clamp(1.4rem, 2.8vw, 2.1rem); line-height: 1.25; font-weight: 500; padding: .2em 0 .2em .9em; border-left: 4px solid var(--acc); color: var(--ink); max-width: 30ch; }
+.avp .pull cite { display: block; font-family: var(--sans); font-size: .8rem; font-style: normal; color: var(--muted); margin-top: .6em; letter-spacing: .04em; }
+
+/* archive annotation */
+.avp .annot { position: relative; display: grid; grid-template-columns: auto 1fr; gap: 16px; padding: 20px 22px; background: repeating-linear-gradient(-45deg, #f1e7d6 0 10px, #f5ecde 10px 20px); border: 1px solid var(--line); border-radius: 6px; }
+.avp .annot .stamp { font-size: .66rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--ink); border: 1.5px solid var(--ink); padding: .5em .6em; border-radius: 4px; height: max-content; transform: rotate(-3deg); background: var(--paper); white-space: nowrap; }
+.avp .annot p { font-size: .94em; color: var(--ink-2); font-style: italic; font-family: var(--serif); }
+@media (max-width: 560px) { .avp .annot { grid-template-columns: 1fr; } }
+
+/* where it went next */
+.avp .next { background: var(--night); color: var(--cream); border-radius: calc(var(--radius) + 6px); padding: clamp(24px, 4vw, 44px); }
+.avp .next .eyebrow { color: var(--gold); }
+.avp .next h2 { color: var(--cream); margin: .3rem 0 .8rem; }
+.avp .next p { color: #e9dfcf; max-width: 62ch; }
+.avp .next .links { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 12px; margin-top: 1.4rem; }
+.avp .next .links a { display: block; padding: 16px 18px; border-radius: 12px; background: rgba(246,239,227,.07); border: 1px solid rgba(246,239,227,.2); color: var(--cream); text-decoration: none; font-weight: 700; }
+.avp .next .links a span { display: block; font-weight: 400; font-size: .86rem; color: #d8ccb8; margin-top: .25em; }
+.avp .next .links a:hover { background: rgba(246,239,227,.14); border-color: var(--gold); }
+
+/* edition pager */
+.avp .pager { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 28px; }
+.avp .pager a { display: block; padding: 16px 18px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); text-decoration: none; color: var(--ink); }
+.avp .pager a small { display: block; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+.avp .pager a:last-child { text-align: right; }
+.avp .pager a:hover { border-color: var(--acc); }
+@media (max-width: 560px) { .avp .pager { grid-template-columns: 1fr; } .avp .pager a:last-child { text-align: left; } }
+
+/* resource footer */
+.avp .rfoot { margin-top: 40px; padding: 26px 0 0; border-top: 1px solid var(--line); font-size: .86rem; color: var(--muted); }
+.avp .rfoot .help { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 10px; margin: 1rem 0; }
+.avp .rfoot .help div { padding: 12px 14px; background: var(--paper); border: 1px solid var(--line); border-radius: 10px; }
+.avp .rfoot .help strong { display: block; color: var(--ink); font-size: .95rem; }
+.avp .rfoot details { margin-top: 1rem; }
+.avp .rfoot summary { cursor: pointer; font-weight: 700; color: var(--ink); }
+.avp .rfoot ol { margin-top: .6rem; }
+.avp .rfoot ol li { margin: .3em 0; }
+
+/* ---------- archive landing ---------- */
+.avp .timeline { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; list-style: none; padding: 0; margin: 2rem 0 0; }
+.avp .timeline::before { content: ""; position: absolute; left: 4%; right: 4%; top: 30px; height: 2px; background: linear-gradient(90deg, #587592, #b9862e, #2f6b55, #7a2e4a, var(--red)); }
+.avp .timeline li { position: relative; margin: 0; text-align: center; padding: 0 8px; }
+.avp .timeline .node { width: 60px; height: 60px; margin: 0 auto 14px; border-radius: 50%; display: grid; place-items: center; font-family: var(--serif); font-size: 1.2rem; font-weight: 600; background: var(--paper); border: 2px solid var(--c, var(--ink)); color: var(--c, var(--ink)); position: relative; z-index: 1; }
+.avp .timeline li.now .node { width: 72px; height: 72px; margin-top: -6px; background: var(--red); color: #fff; border-color: var(--red); box-shadow: 0 0 0 6px rgba(179,50,43,.15); }
+.avp .timeline .k { display: block; font-size: .72rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--c, var(--ink)); }
+.avp .timeline .w { display: block; font-family: var(--serif); font-size: 1.15rem; font-weight: 600; margin-top: .2em; }
+.avp .timeline .d { display: block; font-size: .84rem; color: var(--muted); margin-top: .3em; line-height: 1.4; }
+@media (max-width: 820px) {
+  .avp .timeline { grid-template-columns: 1fr; gap: 18px; }
+  .avp .timeline::before { left: 29px; right: auto; top: 10px; bottom: 10px; width: 2px; height: auto; background: linear-gradient(180deg, #587592, #b9862e, #2f6b55, #7a2e4a, var(--red)); }
+  .avp .timeline li { display: grid; grid-template-columns: 60px 1fr; gap: 0 16px; text-align: left; padding: 0; }
+  .avp .timeline .node { margin: 0; grid-row: span 3; }
+  .avp .timeline li.now .node { width: 60px; height: 60px; margin: 0; }
+}
+
+.avp .equation { display: grid; gap: 10px; margin-top: 1.6rem; }
+.avp .eq-row { display: grid; grid-template-columns: 150px 1fr; gap: 16px; align-items: center; padding: 12px 16px; border-radius: 12px; background: var(--paper); border: 1px solid var(--line); }
+.avp .eq-row .ed { font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--c); }
+.avp .eq-row .terms { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-weight: 700; font-size: .92rem; }
+.avp .eq-row .terms span.t { padding: .25em .6em; border-radius: 6px; background: #fff; border: 1px solid var(--line); }
+.avp .eq-row .terms span.t.new { background: var(--c); color: #fff; border-color: var(--c); }
+.avp .eq-row .terms .op { color: var(--muted); }
+.avp .eq-row.now { background: var(--night); border-color: var(--night); }
+.avp .eq-row.now .ed { color: var(--gold); }
+.avp .eq-row.now .terms { color: var(--cream); }
+.avp .eq-row.now .terms span.t { background: transparent; border-color: rgba(246,239,227,.35); }
+.avp .eq-row.now .terms span.t.new { background: var(--red); border-color: var(--red); }
+@media (max-width: 620px) { .avp .eq-row { grid-template-columns: 1fr; gap: 6px; } }
+
+.avp .ed-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 18px; }
+.avp .ed-card { display: flex; flex-direction: column; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: transform .2s ease, box-shadow .2s ease; }
+.avp .ed-card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px -18px rgba(29,26,23,.35); }
+.avp .ed-card .cov { aspect-ratio: 4 / 3; background: var(--c-soft); border-bottom: 1px solid var(--line); display: grid; place-items: center; padding: 14px; }
+.avp .ed-card .cov svg { width: 100%; height: 100%; }
+.avp .ed-card .body { padding: 18px 18px 20px; display: flex; flex-direction: column; gap: .55rem; flex: 1; }
+.avp .ed-card .no { font-size: .7rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--c); }
+.avp .ed-card h3 { font-size: 1.35rem; }
+.avp .ed-card .qq { font-family: var(--serif); font-style: italic; color: var(--ink-2); font-size: .98rem; }
+.avp .ed-card p { font-size: .92rem; color: var(--ink-2); }
+.avp .ed-card .cta { margin-top: auto; padding-top: .6rem; }
+.avp .ed-card .cta a { font-size: .95rem; }
+
+.avp .current { position: relative; background: var(--night); color: var(--cream); border-radius: calc(var(--radius) + 8px); overflow: hidden; }
+.avp .current .in { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(24px, 4vw, 56px); align-items: center; padding: clamp(28px, 5vw, 64px); }
+.avp .current h2 { color: var(--cream); font-size: clamp(2rem, 4.4vw, 3.4rem); margin: .6rem 0 .5rem; }
+.avp .current p { color: #e9dfcf; }
+.avp .current .loop-words { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 1.2rem 0 0; }
+.avp .current .loop-words li { margin: 0; font-size: .74rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: .35em .7em; border-radius: 999px; border: 1px solid rgba(246,239,227,.35); color: var(--cream); }
+@media (max-width: 860px) { .avp .current .in { grid-template-columns: 1fr; } }
+
+.avp .learned { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 16px; }
+.avp .learned .card .from { font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--c); }
+.avp .learned .card h3 { font-size: 1.15rem; margin: .3rem 0 .4rem; }
+
+.avp .thread { display: grid; gap: 0; list-style: none; padding: 0; margin: 1.4rem 0 0; }
+.avp .thread li { margin: 0; display: grid; grid-template-columns: 110px 1fr; gap: 18px; padding: 16px 0; border-top: 1px dashed var(--line); }
+.avp .thread li:first-child { border-top: 0; }
+.avp .thread .ed { font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--c); padding-top: .3em; }
+.avp .thread p { color: var(--ink-2); }
+@media (max-width: 560px) { .avp .thread li { grid-template-columns: 1fr; gap: 4px; } }
+
+/* ---------- Edition themes ----------
+   Each edition keeps the Aletheia DNA (cream, ink, Fraunces/DM Sans) and
+   moves its accent closer to Aletheia red as the thinking matures. */
+.avp[data-ed="01"] { --acc: #3f607e; --acc-soft: #dfe7ee; --acc-ink: #fff; }
+.avp[data-ed="02"] { --acc: #8a5f0f; --acc-soft: #f3e6c6; --acc-ink: #fff; }
+.avp[data-ed="03"] { --acc: #2f6b55; --acc-soft: #dcebe3; --acc-ink: #fff; }
+.avp[data-ed="04"] { --acc: #7a2e4a; --acc-soft: #efdde3; --acc-ink: #fff; }
+.avp[data-ed="05"], .avp[data-ed="arc"] { --acc: var(--red); --acc-soft: #f6dcd6; --acc-ink: #fff; }
+
+/* 01: health-education workbook, graph paper under the hero */
+.avp[data-ed="01"] .hero { background-image: linear-gradient(rgba(63,96,126,.09) 1px, transparent 1px), linear-gradient(90deg, rgba(63,96,126,.09) 1px, transparent 1px); background-size: 24px 24px; }
+.avp[data-ed="01"] .label-note { font-family: var(--serif); font-style: italic; color: var(--acc); }
+
+/* 02: speech + index-card language */
+.avp[data-ed="02"] .hero { background: radial-gradient(circle at 85% 30%, #f3e6c6 0, transparent 45%); }
+.avp[data-ed="02"] .vocab { border-radius: 4px; box-shadow: 3px 3px 0 var(--gold-soft); }
+
+/* 03: navigation, map lines */
+.avp[data-ed="03"] .hero { background-image: radial-gradient(circle, rgba(47,107,85,.18) 1.5px, transparent 1.6px); background-size: 22px 22px; }
+
+/* 04: networks, darker and more editorial */
+.avp[data-ed="04"] .hero { background: var(--night); color: var(--cream); }
+.avp[data-ed="04"] .hero .q, .avp[data-ed="04"] .hero .lede, .avp[data-ed="04"] .hero .meta { color: #e2d6c3; }
+.avp[data-ed="04"] .hero .eyebrow { color: #e7a9bf; }
+.avp[data-ed="04"] .hero .frame li { background: transparent; color: var(--cream); border-color: #b76a87; }
+.avp[data-ed="04"] .hero .frame li::before { color: #e7a9bf; }
+.avp[data-ed="04"] .hero .btn.ghost { color: var(--cream); border-color: var(--cream); }
+
+/* 05: the current edition. Echo type recreates the stacked-title look of the April 2026 Canva edition */
+.avp[data-ed="05"] .hero { background: var(--night); color: var(--cream); padding-bottom: clamp(56px, 8vw, 110px); }
+.avp[data-ed="05"] .hero .lede, .avp[data-ed="05"] .hero .meta, .avp[data-ed="05"] .hero .q { color: #e2d6c3; }
+.avp[data-ed="05"] .hero .frame li { background: transparent; color: var(--cream); border-color: rgba(246,239,227,.4); }
+.avp[data-ed="05"] .hero .frame li::before { color: #f08a80; }
+.avp[data-ed="05"] .hero .eyebrow { color: var(--gold); }
+.avp[data-ed="05"] .hero .btn.ghost { color: var(--cream); border-color: var(--cream); }
+.avp .echo { position: relative; display: inline-block; }
+.avp .echo::before, .avp .echo::after { content: attr(data-text); position: absolute; left: 0; top: 0; pointer-events: none; z-index: -1; color: transparent; -webkit-text-stroke: 1.5px var(--red); }
+.avp .echo::before { transform: translate(.045em, .045em); opacity: .8; }
+.avp .echo::after { transform: translate(.09em, .09em); opacity: .45; }
+.avp .echo-wrap { position: relative; z-index: 0; isolation: isolate; }
+.avp .echo.r { color: #e0564c; }
+.avp .echo.r::before, .avp .echo.r::after { -webkit-text-stroke-color: var(--cream); }
+.avp .echo.g { color: var(--gold); }
+
+/* the Aletheia loop */
+.avp .loop-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.avp .loop-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+.avp .loop-list li { margin: 0; display: grid; grid-template-columns: 38px 1fr; gap: 12px; align-items: start; padding: 10px 12px; border-radius: 10px; background: #fff; border: 1px solid var(--line); }
+.avp .loop-list .k { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; background: var(--red); color: #fff; font-weight: 700; font-family: var(--serif); }
+.avp .loop-list strong { display: block; }
+.avp .loop-list span { font-size: .9rem; color: var(--ink-2); }
+
+.avp .doors { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 12px; }
+.avp .door { display: block; padding: 18px; border-radius: 14px; background: var(--paper); border: 1px solid var(--line); text-decoration: none; color: var(--ink); position: relative; }
+.avp .door:hover { border-color: var(--red); }
+.avp .door .s { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; display: block; }
+.avp .door .go { display: block; margin-top: .4rem; font-size: .88rem; color: var(--ink-2); font-weight: 400; }
+.avp .door .stage { display: block; margin-bottom: .35rem; font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: var(--red); font-weight: 700; }
+
+.avp .stagechips { display: flex; flex-wrap: wrap; gap: 4px; margin-top: .6rem; list-style: none; padding: 0; }
+.avp .stagechips li { margin: 0; font-size: .64rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: .2em .5em; border-radius: 4px; background: var(--ink); color: var(--cream); }
+
+/* dismissal cards (current edition) */
+.avp .dcard { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
+.avp .dcard .heard { background: #efe8dc; padding: 14px 18px; font-family: var(--serif); font-style: italic; font-size: 1.1rem; color: var(--ink); }
+.avp .dcard .heard small { display: block; font-family: var(--sans); font-style: normal; font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: .2rem; }
+.avp .dcard .b { padding: 14px 18px 18px; display: grid; gap: .7rem; }
+.avp .dcard .b .k { font-size: .66rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--red); display: block; margin-bottom: .15rem; }
+.avp .dcard .b p { font-size: .93em; color: var(--ink-2); }
+.avp .dcard .b .you { font-family: var(--serif); color: var(--ink); font-size: 1rem; }
+
+/* dark band */
+.avp .band { background: var(--night); color: var(--cream); }
+.avp .band h2, .avp .band h3 { color: var(--cream); }
+.avp .band p { color: #e2d6c3; }
+.avp .band .eyebrow { color: var(--gold); }
+.avp .band a:not(.btn) { color: var(--gold-soft); }
+
+/* teaser strip (Voice Packs page) */
+.avp .strip { display: grid; grid-template-columns: repeat(4, 1fr) 1.25fr; gap: 10px; align-items: stretch; margin-top: 1.6rem; }
+.avp .strip a { display: flex; flex-direction: column; gap: 8px; padding: 14px; border-radius: 12px; background: var(--paper); border: 1px solid var(--line); text-decoration: none; color: var(--ink); }
+.avp .strip a .cov { aspect-ratio: 4/3; border-radius: 8px; background: var(--c-soft); display: grid; place-items: center; padding: 8px; }
+.avp .strip a small { font-size: .66rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--c); }
+.avp .strip a strong { font-family: var(--serif); font-size: 1.05rem; line-height: 1.2; }
+.avp .strip a.now { background: var(--red); border-color: var(--red); color: #fff; }
+.avp .strip a.now small { color: #ffe3dc; }
+.avp .strip a.now .cov { background: rgba(255,255,255,.12); }
+.avp .strip a:hover { border-color: var(--c, var(--red)); transform: translateY(-2px); }
+@media (max-width: 900px) { .avp .strip { grid-template-columns: 1fr 1fr; } .avp .strip a.now { grid-column: 1 / -1; } }
+
+/* support directory */
+.avp .dir { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 10px; }
+.avp .dir div { padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+.avp .dir strong { display: block; font-family: var(--serif); font-size: 1.05rem; }
+.avp .dir .num { display: block; font-weight: 700; color: var(--red); margin: .15rem 0; font-size: 1.05rem; }
+.avp .dir span { font-size: .85rem; color: var(--ink-2); }
+
+/* print */
+@media print {
+  .avp { background: #fff; font-size: 10.5pt; }
+  .avp .toc, .avp .toc-mobile, .avp .progress, .avp .btns, .avp .pager, .avp .no-print { display: none !important; }
+  .avp .layout { grid-template-columns: 1fr; }
+  .avp .hero { padding: 28pt 0 18pt; }
+  .avp .chapter { break-before: page; padding-top: 0; border-top: 0; }
+  .avp .card, .avp .scenario, .avp .reflect, .avp .callout, .avp .mf, .avp figure, .avp .dcard, .avp .level, .avp .vocab, .avp .line, .avp .steps > li, .avp .next { break-inside: avoid; }
+  .avp a { color: inherit; text-decoration: none; }
+  .avp .section { padding: 18pt 0; }
+  .avp .ed-card:hover { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) { .avp *, .avp *::before, .avp *::after { animation: none !important; transition: none !important; } }
+</style>
+<div class="avp" data-ed="02">
+<div class="progress" aria-hidden="true"><span></span></div>
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="badge"><span class="dot" aria-hidden="true"></span>Archive Edition 02</span>
+      <p class="eyebrow" style="margin-top:1.2rem">Voice Pack Archive</p>
+      <h1>Find the Words</h1>
+      <p class="q">“How do I explain what I’m experiencing?”</p>
+      <p class="lede" style="margin-top:1rem">Knowing how your body works is one thing. Explaining what’s happening in it, clearly enough that someone else understands, is another. This edition is about the words in between.</p>
+      <ol class="frame" aria-label="How this edition is organised"><li>Learn</li><li>Notice</li><li>Describe</li><li>Ask</li></ol>
+      <div class="btns no-print">
+        <a class="btn" href="#start">Start reading</a>
+        <a class="btn ghost" href="/wp-content/uploads/2026/10/Aletheia-Voice-Pack-Archive-Edition-02-Find-the-Words.pdf" target="_blank" rel="noopener">Open the PDF<span class="sr-only"> (opens in a new tab)</span></a>
+      </div>
+      <div class="meta"><span>About 30 minutes to read</span><span>For ages 12+</span></div>
+    </div>
+    <div class="art"><svg class="" viewBox="0 0 320 240" role="img" aria-labelledby="g6t g6d" xmlns="http://www.w3.org/2000/svg"><title id="g6t">Edition 02 cover: speech bubbles and word cards</title><desc id="g6d">Three overlapping speech bubbles containing the words cramping, sharp and every month, beside a small 0 to 10 scale.</desc>
+      <g font-family="var(--serif, Georgia, serif)">
+        <path d="M24 40h150a14 14 0 0 1 14 14v40a14 14 0 0 1-14 14H70l-20 18v-18H24a14 14 0 0 1-14-14V54a14 14 0 0 1 14-14z" fill="#fff" stroke="#8a5f0f" stroke-width="2.5"/>
+        <text x="96" y="83" font-size="22" font-weight="500" text-anchor="middle" fill="#1d1a17" font-family="var(--serif, Georgia, serif)" font-style="italic">“cramping”</text>
+        <path d="M146 112h142a14 14 0 0 1 14 14v36a14 14 0 0 1-14 14h-20v18l-20-18H146a14 14 0 0 1-14-14v-36a14 14 0 0 1 14-14z" fill="#8a5f0f"/>
+        <text x="217" y="152" font-size="17" font-weight="500" text-anchor="middle" fill="#fff" font-family="var(--serif, Georgia, serif)" font-style="italic">“sharp, on the left”</text>
+        <path d="M40 150h70a12 12 0 0 1 12 12v24a12 12 0 0 1-12 12H62l-14 12v-12h-8a12 12 0 0 1-12-12v-24a12 12 0 0 1 12-12z" fill="#f3e6c6" stroke="#8a5f0f" stroke-width="2"/>
+        <text x="75" y="181" font-size="13" font-weight="500" text-anchor="middle" fill="#1d1a17" font-family="var(--sans, sans-serif)">every month</text>
+      </g>
+      <g><rect x="196" y="56" width="7" height="6" rx="2" fill="#8a5f0f" fill-opacity="0.25"/><rect x="206" y="54" width="7" height="8" rx="2" fill="#8a5f0f" fill-opacity="0.32"/><rect x="216" y="52" width="7" height="10" rx="2" fill="#8a5f0f" fill-opacity="0.39"/><rect x="226" y="50" width="7" height="12" rx="2" fill="#8a5f0f" fill-opacity="0.46"/><rect x="236" y="48" width="7" height="14" rx="2" fill="#8a5f0f" fill-opacity="0.53"/><rect x="246" y="46" width="7" height="16" rx="2" fill="#8a5f0f" fill-opacity="0.6000000000000001"/><rect x="256" y="44" width="7" height="18" rx="2" fill="#8a5f0f" fill-opacity="0.67"/><rect x="266" y="42" width="7" height="20" rx="2" fill="#8a5f0f" fill-opacity="0.74"/><rect x="276" y="40" width="7" height="22" rx="2" fill="#8a5f0f" fill-opacity="0.81"/><rect x="286" y="38" width="7" height="24" rx="2" fill="#8a5f0f" fill-opacity="0.8800000000000001"/><rect x="296" y="36" width="7" height="26" rx="2" fill="#8a5f0f" fill-opacity="0.9500000000000001"/>
+      <text x="196" y="78" font-size="10" font-weight="500" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">0</text><text x="296" y="78" font-size="10" font-weight="500" text-anchor="end" fill="#1d1a17" font-family="var(--sans, sans-serif)">10</text></g>
+      <text x="20" y="226" font-size="10" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">EDITION 02 · FIND THE WORDS</text></svg></div>
+  </div>
+</header>
+<div class="wrap section" style="padding-top:clamp(28px,4vw,48px)">
+  <div style="margin-bottom:clamp(28px,4vw,44px)"><aside class="annot" aria-label="From the archive"><span class="stamp">From the archive</span><p>This edition marks the first big shift in how Aletheia thought about health education. Young people told us they understood their bodies better after the first packs, but still froze in the GP’s office, or said “I just feel off” and watched the conversation move on. We realised knowledge needed language. This is where Voice Packs started becoming more than information sheets.</p></aside></div>
+  <div class="layout">
+    <nav class="toc no-print" aria-label="Contents"><h2>Contents</h2><ol><li><a href="#start" data-toc="start"><span class="n">01</span>Why words matter</a></li><li><a href="#learn" data-toc="learn"><span class="n">02</span>Health words</a></li><li><a href="#notice" data-toc="notice"><span class="n">03</span>Know your normal</a></li><li><a href="#describe" data-toc="describe"><span class="n">04</span>Describe it</a></li><li><a href="#ask" data-toc="ask"><span class="n">05</span>Prepare and ask</a></li><li><a href="#your-words" data-toc="your-words"><span class="n">06</span>Your words</a></li></ol></nav>
+    <article class="pack-main">
+      <details class="toc-mobile no-print"><summary>Contents</summary><ol><li><a href="#start">Why words matter</a></li><li><a href="#learn">Health words</a></li><li><a href="#notice">Know your normal</a></li><li><a href="#describe">Describe it</a></li><li><a href="#ask">Prepare and ask</a></li><li><a href="#your-words">Your words</a></li></ol></details>
+      <section class="chapter" id="start" aria-labelledby="start-h"><div class="ch-head"><span class="ch-num" aria-hidden="true">01</span><p class="eyebrow">Before we begin</p><h2 id="start-h">“I just feel off.”</h2></div><div class="ch-intro"><p>You know something’s not right. But when someone asks what’s wrong, the words don’t come. You say “it hurts” or “I’m just tired”, and it sounds smaller than it feels.</p><p>That isn’t because your experience is small. It’s because nobody taught you the words for it. Doctors work with information: where, when, how bad, how often. The clearer the information, the easier it is for them, and for you, to work out what’s going on.</p></div><div class="block"><blockquote class="pull"><p>Your experience doesn’t need to be dramatic to be real. It needs to be described.</p></blockquote></div><div class="block"><div class="grid g4"><div class="block"><div class="card"><p class="eyebrow">01 Learn</p><h3>Health words</h3><p>The plain meaning of words you’ll hear, and words worth knowing.</p></div></div><div class="block"><div class="card"><p class="eyebrow">02 Notice</p><h3>Your normal</h3><p>What’s usual for you, so you can spot a change.</p></div></div><div class="block"><div class="card"><p class="eyebrow">03 Describe</p><h3>The five questions</h3><p>What, where, when, how much, and what changes it.</p></div></div><div class="block"><div class="card"><p class="eyebrow">04 Ask</p><h3>At the GP</h3><p>Preparing, and the questions you’re allowed to ask.</p></div></div></div></div><div class="block"><div class="callout"><span class="ic" aria-hidden="true">↺</span><div><h3 class="h4">New here?</h3><p>This edition builds on <a href="/our-work/voice-packs/archive/know-your-body/">Edition 01: Know Your Body</a>, which covers anatomy, puberty and the menstrual cycle. You don’t need to read it first, but it helps.</p></div></div></div></section><section class="chapter" id="learn" aria-labelledby="learn-h"><div class="ch-head"><span class="ch-num" aria-hidden="true">02</span><p class="eyebrow">Learn</p><h2 id="learn-h">Health words, without the jargon</h2></div><div class="ch-intro"><p>Some words come up in almost every appointment. Knowing them means you can follow what’s being said, and use them yourself.</p></div><div class="block"><div class="grid g3"><article class="card vocab">
+    
+    <h3 class="term">Symptom</h3>
+    <dl>
+      <div><dt>What it is</dt><dd>Something you notice that isn’t usual for you: pain, tiredness, a change in bleeding, a feeling that won’t shift.</dd></div>
+      
+      
+      
+      
+    </dl>
+    
+    
+  </article><article class="card vocab">
+    
+    <h3 class="term">Acute</h3>
+    <dl>
+      <div><dt>What it is</dt><dd>Came on recently or suddenly. It doesn’t mean severe.</dd></div>
+      
+      
+      
+      
+    </dl>
+    
+    
+  </article><article class="card vocab">
+    
+    <h3 class="term">Chronic</h3>
+    <dl>
+      <div><dt>What it is</dt><dd>Has lasted a long time, usually three months or more, or keeps coming back. It doesn’t mean it’s serious or can’t be helped.</dd></div>
+      
+      
+      
+      
+    </dl>
+    
+    
+  </article><article class="card vocab">
+    
+    <h3 class="term">Intermittent</h3>
+    <dl>
+      <div><dt>What it is</dt><dd>Comes and goes, rather than being there all the time.</dd></div>
+      
+      
+      
+      
+    </dl>
+    
+    
+  </article><article class="card vocab">
+    
+    <h3 class="term">Referred pain</h3>
+    <dl>
+      <div><dt>What it is</dt><dd>Pain you feel in one place that comes from somewhere else. Period pain often spreads to the lower back and thighs.</dd></div>
+      
+      
+      
+      
+    </dl>
+    
+    
+  </article><article class="card vocab">
+    
+    <h3 class="term">Fatigue</h3>
+    <dl>
+      <div><dt>What it is</dt><dd>Exhaustion that doesn’t go away with rest. Different from being tired after a late night.</dd></div>
+      
+      
+      
+      
+    </dl>
+    
+    
+  </article><article class="card vocab">
+    
+    <h3 class="term">Dysmenorrhoea</h3><span class="say">dis-men-or-REE-a</span>
+    <dl>
+      <div><dt>What it is</dt><dd>The medical word for period pain. Primary means there’s no other condition causing it; secondary means there is.</dd></div>
+      
+      
+      
+      
+    </dl>
+    
+    
+  </article><article class="card vocab">
+    
+    <h3 class="term">Heavy menstrual bleeding</h3>
+    <dl>
+      <div><dt>What it is</dt><dd>Bleeding that’s heavy enough to affect your day: changing a pad or tampon every one to two hours, flooding, or clots bigger than a 50-cent coin.</dd></div>
+      
+      
+      
+      
+    </dl>
+    
+    
+  </article><article class="card vocab">
+    
+    <h3 class="term">Irregular</h3>
+    <dl>
+      <div><dt>What it is</dt><dd>Cycles that change a lot in length from one to the next, or are under 21 or over 45 days.</dd></div>
+      
+      
+      
+      
+    </dl>
+    
+    
+  </article></div></div><div class="block"><h3>Words you might hear, and why it helps to know them</h3></div><div class="block"><div class="prose"><p>You don’t need to diagnose yourself. But knowing that some common conditions exist, and what they tend to look like, helps you recognise when something might be worth asking about.</p></div></div><div class="block"><div class="grid g2"><article class="card vocab">
+    
+    <h3 class="term">Endometriosis</h3><span class="say">en-doh-mee-tree-OH-sis</span>
+    <dl>
+      <div><dt>What it is</dt><dd>Tissue similar to the lining of the uterus grows outside it, causing inflammation and pain. About 1 in 7 people assigned female at birth in Australia are diagnosed by their late 40s.</dd></div>
+      <div><dt>What it can feel like</dt><dd>Period pain that stops you doing things, pain that gets worse over time, pain with bowel movements or weeing during your period, pain between periods.</dd></div>
+      
+      
+      
+    </dl>
+    <p class="say-head">You can say</p><ul class="say-list"><li>My period pain stops me going to school.</li><li>It’s getting worse each year.</li></ul>
+    
+  </article><article class="card vocab">
+    
+    <h3 class="term">Polycystic ovary syndrome (PCOS)</h3><span class="say">pol-ee-SIS-tik</span>
+    <dl>
+      <div><dt>What it is</dt><dd>A common hormonal condition, affecting about 8–13% of women of reproductive age. Despite the name, it isn’t about cysts.</dd></div>
+      <div><dt>What it can feel like</dt><dd>Irregular or missing periods, acne, extra hair on the face or body, or hair thinning on the head.</dd></div>
+      
+      
+      <div><dt>Updated</dt><dd>Archive note: in 2026 this condition was renamed polyendocrine metabolic ovarian syndrome (PMOS). The current Voice Pack uses the new name.</dd></div>
+    </dl>
+    <p class="say-head">You can say</p><ul class="say-list"><li>My periods are often months apart.</li><li>I’ve had acne and irregular periods together for a while.</li></ul>
+    
+  </article><article class="card vocab">
+    
+    <h3 class="term">Iron deficiency</h3>
+    <dl>
+      <div><dt>What it is</dt><dd>Not having enough iron, often because of heavy periods. It can lead to anaemia (low red blood cells).</dd></div>
+      <div><dt>What it can feel like</dt><dd>Tiredness that doesn’t lift, feeling breathless or dizzy, pale skin, finding it hard to concentrate.</dd></div>
+      
+      
+      
+    </dl>
+    <p class="say-head">You can say</p><ul class="say-list"><li>I’ve been exhausted and my periods are heavy. Could we check my iron?</li></ul>
+    
+  </article><article class="card vocab">
+    
+    <h3 class="term">Premenstrual syndrome (PMS)</h3>
+    <dl>
+      <div><dt>What it is</dt><dd>Physical and emotional changes in the days before a period: bloating, sore breasts, irritability, low mood. PMDD is a more severe form.</dd></div>
+      <div><dt>What it can feel like</dt><dd>A predictable dip in mood or energy that lifts once your period starts.</dd></div>
+      
+      
+      
+    </dl>
+    <p class="say-head">You can say</p><ul class="say-list"><li>The week before my period, my mood drops a lot, every month.</li></ul>
+    
+  </article></div></div></section><section class="chapter" id="notice" aria-labelledby="notice-h"><div class="ch-head"><span class="ch-num" aria-hidden="true">03</span><p class="eyebrow">Notice</p><h2 id="notice-h">Know your normal</h2></div><div class="ch-intro"><p>Doctors often ask “Is this new?” or “Is this different for you?” To answer, you need a sense of your own baseline: what’s usual for your body.</p></div><div class="block"><div class="grid g2"><div class="block"><div class="card"><h3>Your baseline includes</h3><ul><li>How long your cycle usually is, and how many days you bleed</li><li>How heavy a normal day is for you</li><li>Your usual energy, sleep and appetite</li><li>How you usually feel emotionally across a month</li><li>Any pain you get regularly, and how bad it usually is</li></ul></div></div><div class="block"><div class="card tint"><h3>Signs of a change worth noticing</h3><ul><li>Something new that wasn’t there before</li><li>Something that’s getting worse over time</li><li>Something that’s stopping you doing things you normally do</li><li>Something that keeps coming back in a pattern</li><li>Something that other people have started noticing too</li></ul></div></div></div></div><div class="block"><blockquote class="pull"><p>“Common” and “normal for you” aren’t the same thing. Lots of people get period pain. That doesn’t mean yours should stop you living your life.</p></blockquote></div><div class="block"><div class="reflect"><span class="tag">Reflect</span><h3 style="margin:.3rem 0 .3rem">What’s your normal?</h3><ol><li>How long is your cycle usually, roughly?</li><li>On your heaviest day, how often do you change a pad, tampon or cup?</li><li>What does a ‘normal’ energy day feel like for you?</li><li>Is there anything that’s changed in the last few months?</li></ol><div class="lines" aria-hidden="true"></div></div></div></section><section class="chapter" id="describe" aria-labelledby="describe-h"><div class="ch-head"><span class="ch-num" aria-hidden="true">04</span><p class="eyebrow">Describe</p><h2 id="describe-h">Describe it: the five questions</h2></div><div class="ch-intro"><p>Almost any symptom becomes clearer when you answer five questions. You don’t have to answer them perfectly. Even two or three makes a big difference.</p></div><div class="block"><div class="tbl-wrap"><table><caption class="sr-only">The five questions for describing a symptom</caption><thead><tr><th scope="col">Ask yourself</th><th scope="col">What it means</th><th scope="col">Example</th></tr></thead><tbody><tr><th scope="row" style="font-weight:700;color:var(--ink)">1. What does it feel like?</th><td>The type of feeling</td><td>“A dull ache that turns sharp”</td></tr><tr><th scope="row" style="font-weight:700;color:var(--ink)">2. Where is it?</th><td>The exact place, and whether it spreads</td><td>“Low tummy, left side, spreads to my back”</td></tr><tr><th scope="row" style="font-weight:700;color:var(--ink)">3. When is it?</th><td>When it started, when it happens, how long it lasts</td><td>“Days 1–2 of my period, for about a year”</td></tr><tr><th scope="row" style="font-weight:700;color:var(--ink)">4. How much?</th><td>How strong, and what it stops you doing</td><td>“Usually a 6. I miss school on the first day”</td></tr><tr><th scope="row" style="font-weight:700;color:var(--ink)">5. What changes it?</th><td>What makes it better or worse</td><td>“Heat helps a bit. Moving makes it worse”</td></tr></tbody></table></div></div><div class="block"><h3>1 · What does it feel like? Words to try</h3></div><div class="block"><div class="grid g4"><div class="block"><div class="card"><h3>Cramping</h3><p>Squeezing or tightening, coming in waves.</p></div></div><div class="block"><div class="card"><h3>Aching / dull</h3><p>A heavy, constant, low-level pain.</p></div></div><div class="block"><div class="card"><h3>Sharp / stabbing</h3><p>Sudden, intense, in one spot.</p></div></div><div class="block"><div class="card"><h3>Burning</h3><p>Hot or stinging, like a burn.</p></div></div><div class="block"><div class="card"><h3>Throbbing</h3><p>Pulsing, like a heartbeat.</p></div></div><div class="block"><div class="card"><h3>Pressure</h3><p>Heavy, pushing or dragging down.</p></div></div><div class="block"><div class="card"><h3>Shooting</h3><p>Travels quickly down a leg or into your back.</p></div></div><div class="block"><div class="card"><h3>Tender</h3><p>Sore when touched or pressed.</p></div></div></div></div><div class="block"><h3>2 · Where is it? Use the map</h3><figure class="diagram"><p class="swipe" aria-hidden="true">Swipe sideways to see the whole diagram →</p><svg class="" viewBox="0 0 640 580" role="img" aria-labelledby="g7t g7d" xmlns="http://www.w3.org/2000/svg" style="max-width:640px"><title id="g7t">Body map: front and back outlines with nine numbered zones</title><desc id="g7d">Two simple body outlines, front and back. Numbered zones mark the head (1), chest (2), upper tummy (3), lower tummy on your left (4), lower tummy on your right (5), pelvis (6), lower back (7), arms and joints (8) and legs (9). On the front view, your left side appears on the right of the picture.</desc>
+    <g fill="#fff" stroke="#1d1a17" stroke-width="2">
+      <circle cx="160" cy="64" r="30"/>
+      <rect x="151" y="92" width="18" height="12"/>
+      <rect x="84" y="108" width="24" height="168" rx="12"/><rect x="212" y="108" width="24" height="168" rx="12"/>
+      <rect x="112" y="102" width="96" height="176" rx="28"/>
+      <rect x="116" y="262" width="40" height="176" rx="18"/><rect x="164" y="262" width="40" height="176" rx="18"/></g><g fill="#fff" stroke="#1d1a17" stroke-width="2">
+      <circle cx="440" cy="64" r="30"/>
+      <rect x="431" y="92" width="18" height="12"/>
+      <rect x="364" y="108" width="24" height="168" rx="12"/><rect x="492" y="108" width="24" height="168" rx="12"/>
+      <rect x="392" y="102" width="96" height="176" rx="28"/>
+      <rect x="396" y="262" width="40" height="176" rx="18"/><rect x="444" y="262" width="40" height="176" rx="18"/></g>
+    <text x="160" y="22" font-size="12" font-weight="700" text-anchor="middle" fill="#4a423b" font-family="var(--sans, sans-serif)">FRONT</text><text x="440" y="22" font-size="12" font-weight="700" text-anchor="middle" fill="#4a423b" font-family="var(--sans, sans-serif)">BACK</text>
+    <circle cx="160" cy="64" r="14" fill="var(--acc, #8a5f0f)"/><text x="160" y="69" font-size="14" font-weight="700" text-anchor="middle" fill="#fff" font-family="var(--sans, sans-serif)">1</text><circle cx="160" cy="140" r="14" fill="var(--acc, #8a5f0f)"/><text x="160" y="145" font-size="14" font-weight="700" text-anchor="middle" fill="#fff" font-family="var(--sans, sans-serif)">2</text><circle cx="160" cy="186" r="14" fill="var(--acc, #8a5f0f)"/><text x="160" y="191" font-size="14" font-weight="700" text-anchor="middle" fill="#fff" font-family="var(--sans, sans-serif)">3</text><circle cx="182" cy="230" r="14" fill="var(--acc, #8a5f0f)"/><text x="182" y="235" font-size="14" font-weight="700" text-anchor="middle" fill="#fff" font-family="var(--sans, sans-serif)">4</text><circle cx="138" cy="230" r="14" fill="var(--acc, #8a5f0f)"/><text x="138" y="235" font-size="14" font-weight="700" text-anchor="middle" fill="#fff" font-family="var(--sans, sans-serif)">5</text><circle cx="160" cy="266" r="14" fill="var(--acc, #8a5f0f)"/><text x="160" y="271" font-size="14" font-weight="700" text-anchor="middle" fill="#fff" font-family="var(--sans, sans-serif)">6</text><circle cx="440" cy="236" r="14" fill="var(--acc, #8a5f0f)"/><text x="440" y="241" font-size="14" font-weight="700" text-anchor="middle" fill="#fff" font-family="var(--sans, sans-serif)">7</text><circle cx="96" cy="170" r="14" fill="var(--acc, #8a5f0f)"/><text x="96" y="175" font-size="14" font-weight="700" text-anchor="middle" fill="#fff" font-family="var(--sans, sans-serif)">8</text><circle cx="136" cy="360" r="14" fill="var(--acc, #8a5f0f)"/><text x="136" y="365" font-size="14" font-weight="700" text-anchor="middle" fill="#fff" font-family="var(--sans, sans-serif)">9</text>
+    <line x1="20" y1="458" x2="620" y2="458" stroke="#e2d6c3"/>
+    <text x="24" y="486" font-size="14" font-weight="500" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">1 · head</text><text x="229" y="486" font-size="14" font-weight="500" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">2 · chest</text><text x="434" y="486" font-size="14" font-weight="500" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">3 · upper tummy</text><text x="24" y="510" font-size="14" font-weight="500" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">4 · lower tummy, your left</text><text x="229" y="510" font-size="14" font-weight="500" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">5 · lower tummy, your right</text><text x="434" y="510" font-size="14" font-weight="500" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">6 · pelvis</text><text x="24" y="534" font-size="14" font-weight="500" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">7 · lower back</text><text x="229" y="534" font-size="14" font-weight="500" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">8 · arms and joints</text><text x="434" y="534" font-size="14" font-weight="500" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">9 · legs</text>
+    <text x="24" y="568" font-size="13" font-weight="500" text-anchor="start" fill="#4a423b" font-family="var(--serif, Georgia, serif)" font-style="italic">On the front view, your left side is on the right of the picture.</text></svg><figcaption>Say the zone and the side: “zone 4 and my lower back” is much clearer than “my stomach”.</figcaption></figure></div><div class="block"><h3>4 · How much? Rate what it stops you doing</h3><figure class="diagram"><p class="swipe" aria-hidden="true">Swipe sideways to see the whole diagram →</p><svg class="" viewBox="0 0 640 240" role="img" aria-labelledby="g8t g8d" xmlns="http://www.w3.org/2000/svg" style="max-width:640px"><title id="g8t">Pain scale from 0 to 10 with what each level lets you do</title><desc id="g8d">A scale numbered 0 to 10. Each even number is paired with what the pain stops you doing: 0 no pain; 2 you notice it but carry on; 4 distracting and you need a break; 6 hard to focus or move; 8 you have to stop and lie down; 10 the worst you can imagine.</desc>
+    <text x="20" y="24" font-size="14" font-weight="500" text-anchor="start" fill="#4a423b" font-family="var(--serif, Georgia, serif)" font-style="italic">Rate what the pain stops you doing, not just how it feels.</text>
+    <rect x="17" y="44" width="46" height="36" rx="7" fill="var(--acc, #8a5f0f)" fill-opacity="0.12"/><text x="40" y="68" font-size="17" font-weight="700" text-anchor="middle" fill="#1d1a17" font-family="var(--sans, sans-serif)">0</text><rect x="73" y="44" width="46" height="36" rx="7" fill="var(--acc, #8a5f0f)" fill-opacity="0.20500000000000002"/><text x="96" y="68" font-size="17" font-weight="700" text-anchor="middle" fill="#1d1a17" font-family="var(--sans, sans-serif)">1</text><rect x="129" y="44" width="46" height="36" rx="7" fill="var(--acc, #8a5f0f)" fill-opacity="0.29000000000000004"/><text x="152" y="68" font-size="17" font-weight="700" text-anchor="middle" fill="#1d1a17" font-family="var(--sans, sans-serif)">2</text><rect x="185" y="44" width="46" height="36" rx="7" fill="var(--acc, #8a5f0f)" fill-opacity="0.375"/><text x="208" y="68" font-size="17" font-weight="700" text-anchor="middle" fill="#1d1a17" font-family="var(--sans, sans-serif)">3</text><rect x="241" y="44" width="46" height="36" rx="7" fill="var(--acc, #8a5f0f)" fill-opacity="0.46"/><text x="264" y="68" font-size="17" font-weight="700" text-anchor="middle" fill="#1d1a17" font-family="var(--sans, sans-serif)">4</text><rect x="297" y="44" width="46" height="36" rx="7" fill="var(--acc, #8a5f0f)" fill-opacity="0.545"/><text x="320" y="68" font-size="17" font-weight="700" text-anchor="middle" fill="#1d1a17" font-family="var(--sans, sans-serif)">5</text><rect x="353" y="44" width="46" height="36" rx="7" fill="var(--acc, #8a5f0f)" fill-opacity="0.63"/><text x="376" y="68" font-size="17" font-weight="700" text-anchor="middle" fill="#fff" font-family="var(--sans, sans-serif)">6</text><rect x="409" y="44" width="46" height="36" rx="7" fill="var(--acc, #8a5f0f)" fill-opacity="0.7150000000000001"/><text x="432" y="68" font-size="17" font-weight="700" text-anchor="middle" fill="#fff" font-family="var(--sans, sans-serif)">7</text><rect x="465" y="44" width="46" height="36" rx="7" fill="var(--acc, #8a5f0f)" fill-opacity="0.8"/><text x="488" y="68" font-size="17" font-weight="700" text-anchor="middle" fill="#fff" font-family="var(--sans, sans-serif)">8</text><rect x="521" y="44" width="46" height="36" rx="7" fill="var(--acc, #8a5f0f)" fill-opacity="0.885"/><text x="544" y="68" font-size="17" font-weight="700" text-anchor="middle" fill="#fff" font-family="var(--sans, sans-serif)">9</text><rect x="577" y="44" width="46" height="36" rx="7" fill="var(--acc, #8a5f0f)" fill-opacity="0.9700000000000001"/><text x="600" y="68" font-size="17" font-weight="700" text-anchor="middle" fill="#fff" font-family="var(--sans, sans-serif)">10</text>
+    <line x1="40" y1="84" x2="40" y2="100" stroke="#1d1a17" stroke-width="1.5"/><text x="40" y="120" font-size="13.5" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">No pain</text><line x1="152" y1="84" x2="152" y2="100" stroke="#1d1a17" stroke-width="1.5"/><text x="152" y="120" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1d1a17" font-family="var(--sans, sans-serif)">Notice it,</text><text x="152" y="138" font-size="13.5" font-weight="400" text-anchor="middle" fill="#1d1a17" font-family="var(--sans, sans-serif)">carry on</text><line x1="264" y1="84" x2="264" y2="100" stroke="#1d1a17" stroke-width="1.5"/><text x="264" y="120" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1d1a17" font-family="var(--sans, sans-serif)">Distracting,</text><text x="264" y="138" font-size="13.5" font-weight="400" text-anchor="middle" fill="#1d1a17" font-family="var(--sans, sans-serif)">need a break</text><line x1="376" y1="84" x2="376" y2="100" stroke="#1d1a17" stroke-width="1.5"/><text x="376" y="120" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1d1a17" font-family="var(--sans, sans-serif)">Hard to focus</text><text x="376" y="138" font-size="13.5" font-weight="400" text-anchor="middle" fill="#1d1a17" font-family="var(--sans, sans-serif)">or move</text><line x1="488" y1="84" x2="488" y2="100" stroke="#1d1a17" stroke-width="1.5"/><text x="488" y="120" font-size="13.5" font-weight="700" text-anchor="middle" fill="#1d1a17" font-family="var(--sans, sans-serif)">Have to stop</text><text x="488" y="138" font-size="13.5" font-weight="400" text-anchor="middle" fill="#1d1a17" font-family="var(--sans, sans-serif)">and lie down</text><line x1="600" y1="84" x2="600" y2="100" stroke="#1d1a17" stroke-width="1.5"/><text x="600" y="120" font-size="13.5" font-weight="700" text-anchor="end" fill="#1d1a17" font-family="var(--sans, sans-serif)">Worst I can</text><text x="600" y="138" font-size="13.5" font-weight="400" text-anchor="end" fill="#1d1a17" font-family="var(--sans, sans-serif)">imagine</text>
+    <rect x="20" y="176" width="600" height="44" rx="10" fill="#fbf8f1" stroke="#e2d6c3"/>
+    <text x="36" y="204" font-size="15" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">Give your usual number AND your worst: “Usually 4, at worst 8.”</text></svg><figcaption>Numbers mean different things to different people. Pairing your number with what it stops you doing makes it clear.</figcaption></figure></div><div class="block"><h3>Words for how you’re feeling inside</h3></div><div class="block"><div class="prose"><p>Mental and emotional symptoms need words too. “Stressed” and “sad” cover a lot. Try being more specific.</p></div></div><div class="block"><div class="grid g3"><div class="block"><div class="card"><h3>Instead of “stressed”</h3><ul><li>On edge, can’t switch off</li><li>Overwhelmed by small things</li><li>Heart racing, can’t catch my breath</li><li>Worrying most of the day</li></ul></div></div><div class="block"><div class="card"><h3>Instead of “sad”</h3><ul><li>Flat, like nothing matters</li><li>Numb, or disconnected</li><li>Crying more than usual</li><li>Not enjoying things I used to</li></ul></div></div><div class="block"><div class="card"><h3>Instead of “tired”</h3><ul><li>Exhausted even after sleeping</li><li>Brain fog, can’t concentrate</li><li>Everything takes more effort</li><li>Sleeping much more, or much less</li></ul></div></div></div></div><div class="block"><div><p class="say-head">And to say how long</p><ul class="say-list"><li>Most days for the last two months.</li><li>Every month, in the week before my period.</li><li>It started after [something that happened] and hasn’t gone away.</li></ul></div></div><div class="block"><h3>Track it: patterns are information</h3><figure class="diagram"><p class="swipe" aria-hidden="true">Swipe sideways to see the whole diagram →</p><svg class="" viewBox="0 0 640 290" role="img" aria-labelledby="g9t g9d" xmlns="http://www.w3.org/2000/svg" style="max-width:640px"><title id="g9t">Example symptom tracker for 14 days</title><desc id="g9d">A filled-in example grid covering days 1 to 14. Rows record bleeding (shown as one to three dots for light to heavy), pain from 0 to 10, days of missed school or plans (a tick), low mood and low energy. In the example, pain is 7 and 8 on days 1 and 2 with heavy bleeding and missed school, and mood and energy dip before and during the period.</desc>
+    <text x="167" y="40" font-size="11" font-weight="700" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">D1</text><text x="201" y="40" font-size="11" font-weight="700" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">D2</text><text x="235" y="40" font-size="11" font-weight="700" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">D3</text><text x="269" y="40" font-size="11" font-weight="700" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">D4</text><text x="303" y="40" font-size="11" font-weight="700" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">D5</text><text x="337" y="40" font-size="11" font-weight="700" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">D6</text><text x="371" y="40" font-size="11" font-weight="700" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">D7</text><text x="405" y="40" font-size="11" font-weight="700" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">D8</text><text x="439" y="40" font-size="11" font-weight="700" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">D9</text><text x="473" y="40" font-size="11" font-weight="700" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">D10</text><text x="507" y="40" font-size="11" font-weight="700" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">D11</text><text x="541" y="40" font-size="11" font-weight="700" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">D12</text><text x="575" y="40" font-size="11" font-weight="700" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">D13</text><text x="609" y="40" font-size="11" font-weight="700" text-anchor="middle" fill="#6d645b" font-family="var(--sans, sans-serif)">D14</text>
+    <rect x="10" y="50" width="616" height="34" rx="6" fill="#fbf8f1" stroke="#e2d6c3"/><text x="20" y="72" font-size="12.5" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">Bleeding</text><rect x="10" y="90" width="616" height="34" rx="6" fill="#fff" stroke="#e2d6c3"/><text x="20" y="112" font-size="12.5" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">Pain (0–10)</text><rect x="10" y="130" width="616" height="34" rx="6" fill="#fbf8f1" stroke="#e2d6c3"/><text x="20" y="152" font-size="12.5" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">Missed school / plans</text><rect x="10" y="170" width="616" height="34" rx="6" fill="#fff" stroke="#e2d6c3"/><text x="20" y="192" font-size="12.5" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">Mood</text><rect x="10" y="210" width="616" height="34" rx="6" fill="#fbf8f1" stroke="#e2d6c3"/><text x="20" y="232" font-size="12.5" font-weight="700" text-anchor="start" fill="#1d1a17" font-family="var(--sans, sans-serif)">Energy</text>
+    <g><circle cx="159" cy="67" r="3.3" fill="var(--acc, #8a5f0f)"/><circle cx="167" cy="67" r="3.3" fill="var(--acc, #8a5f0f)"/><circle cx="175" cy="67" r="3.3" fill="var(--acc, #8a5f0f)"/></g><g><circle cx="193" cy="67" r="3.3" fill="var(--acc, #8a5f0f)"/><circle cx="201" cy="67" r="3.3" fill="var(--acc, #8a5f0f)"/><circle cx="209" cy="67" r="3.3" fill="var(--acc, #8a5f0f)"/></g><g><circle cx="227" cy="67" r="3.3" fill="var(--acc, #8a5f0f)"/><circle cx="235" cy="67" r="3.3" fill="var(--acc, #8a5f0f)"/></g><g><circle cx="261" cy="67" r="3.3" fill="var(--acc, #8a5f0f)"/></g><g><circle cx="295" cy="67" r="3.3" fill="var(--acc, #8a5f0f)"/></g><text x="167" y="112" font-size="13" font-weight="700" text-anchor="middle" fill="#1d1a17" font-family="var(--sans, sans-serif)">7</text><text x="201" y="112" font-size="13" font-weight="700" text-anchor="middle" fill="#1d1a17" font-family="var(--sans, sans-serif)">8</text><text x="235" y="112" font-size="13" font-weight="500" text-anchor="middle" fill="#1d1a17" font-family="var(--sans, sans-serif)">5</text><text x="269" y="112" font-size="13" font-weight="500" text-anchor="middle" fill="#1d1a17" font-family="var(--sans, sans-serif)">3</text><text x="303" y="112" font-size="13" font-weight="500" text-anchor="middle" fill="#1d1a17" font-family="var(--sans, sans-serif)">1</text><text x="575" y="112" font-size="13" font-weight="500" text-anchor="middle" fill="#1d1a17" font-family="var(--sans, sans-serif)">2</text><text x="609" y="112" font-size="13" font-weight="500" text-anchor="middle" fill="#1d1a17" font-family="var(--sans, sans-serif)">3</text><path d="M159 148l6 6 11-12" fill="none" stroke="var(--acc, #8a5f0f)" stroke-width="3"/><path d="M193 148l6 6 11-12" fill="none" stroke="var(--acc, #8a5f0f)" stroke-width="3"/><text x="167" y="192" font-size="10.5" font-weight="500" text-anchor="middle" fill="#1d1a17" font-family="var(--serif, Georgia, serif)" font-style="italic">low</text><text x="201" y="192" font-size="10.5" font-weight="500" text-anchor="middle" fill="#1d1a17" font-family="var(--serif, Georgia, serif)" font-style="italic">low</text><text x="575" y="192" font-size="10.5" font-weight="500" text-anchor="middle" fill="#1d1a17" font-family="var(--serif, Georgia, serif)" font-style="italic">low</text><text x="609" y="192" font-size="10.5" font-weight="500" text-anchor="middle" fill="#1d1a17" font-family="var(--serif, Georgia, serif)" font-style="italic">low</text><text x="167" y="232" font-size="10.5" font-weight="500" text-anchor="middle" fill="#1d1a17" font-family="var(--serif, Georgia, serif)" font-style="italic">low</text><text x="201" y="232" font-size="10.5" font-weight="500" text-anchor="middle" fill="#1d1a17" font-family="var(--serif, Georgia, serif)" font-style="italic">low</text><text x="235" y="232" font-size="10.5" font-weight="500" text-anchor="middle" fill="#1d1a17" font-family="var(--serif, Georgia, serif)" font-style="italic">low</text><text x="609" y="232" font-size="10.5" font-weight="500" text-anchor="middle" fill="#1d1a17" font-family="var(--serif, Georgia, serif)" font-style="italic">low</text>
+    <text x="10" y="272" font-size="12" font-weight="500" text-anchor="start" fill="#6d645b" font-family="var(--sans, sans-serif)">Bleeding: ● light  ●● medium  ●●● heavy. Low = noticeably lower than your usual.</text></svg><figcaption>Two or three months of tracking often shows a pattern you can’t see day to day. A notes app, a period app or the Aletheia Self-Advocacy Journal all work.</figcaption></figure></div></section><section class="chapter" id="ask" aria-labelledby="ask-h"><div class="ch-head"><span class="ch-num" aria-hidden="true">05</span><p class="eyebrow">Ask</p><h2 id="ask-h">Prepare, then ask</h2></div><div class="ch-intro"><p>A GP appointment is often 10 to 15 minutes. Five minutes of preparing beforehand means you use that time well.</p></div><div class="block"><div class="grid g2"><div class="block"><div class="card"><h3>Before the appointment</h3><ul class="check"><li>Write your main concern in one sentence</li><li>Answer the five questions for it</li><li>Bring your tracker, or a few notes on your phone</li><li>List any medicines or supplements you take</li><li>Write down 2–3 questions</li><li>Ask for a longer appointment if you have more than one thing</li></ul></div></div><div class="block"><div class="card tint"><h3>Questions you’re allowed to ask</h3><ul><li>What could be causing this?</li><li>Is this something I should keep an eye on?</li><li>Are there tests that could help?</li><li>What can I do to feel better in the meantime?</li><li>What should make me come back sooner?</li><li>Can you write that down for me?</li><li>Could you explain that another way?</li></ul></div></div></div></div><div class="block"><div class="card"><h3 class="h4" style="margin-bottom:.4rem">Booking the appointment</h3><div class="script"><div class="line them"><span class="who">Receptionist</span><div class="bub">What’s the appointment for?</div></div><div class="line you"><span class="who">You</span><div class="bub">I’ve been having painful periods and I’d like to talk to a GP about it.</div></div><div class="line them"><span class="who">Receptionist</span><div class="bub">No problem. Do you need a standard or a long appointment?</div></div><div class="line you"><span class="who">You</span><div class="bub">Could I have a long one? I have a few things to go through.</div></div></div><div style="margin-top:.8rem"><p>You don’t have to give the receptionist details. “A private health concern” is enough.</p></div></div></div><div class="block"><div class="card"><h3 class="h4" style="margin-bottom:.4rem">Opening the appointment</h3><div class="script"><div class="line them"><span class="who">Clinician</span><div class="bub">What brings you in today?</div></div><div class="line you"><span class="who">You</span><div class="bub">I’ve had period pain for about a year that’s getting worse. It’s sharp and cramping, low on my left side and into my back. It’s usually a 6, and on the first day it’s an 8, so I miss school.</div></div><div class="line you"><span class="who">You</span><div class="bub">Heat helps a bit, but not enough. I brought my tracker.</div></div></div><div style="margin-top:.8rem"><p>That’s thirty seconds, and it answers most of the questions the GP would otherwise need to ask.</p></div></div></div><div class="block"><article class="scenario"><span class="tag">Maya, one year later</span><h3>From “it hurts” to a clear description</h3><p>Maya’s cramps have got worse. Last time she told a school nurse “my stomach hurts on my period”, she was given a heat pack and sent back to class.</p><p>This time she tracks two cycles. She notes where the pain is (low, mostly left, into her back), how long it lasts (the first two days), how strong it is (usually a 6, an 8 on day one) and what it stops (she’s missed four school days this term).</p><p>At the GP she reads from her notes. The GP asks more questions, suggests a plan to try for three months, and asks her to come back with her tracker if it doesn’t help.</p><small class="fic">Maya is fictional. Her story continues in Edition 03.</small></article></div></section><section class="chapter" id="your-words" aria-labelledby="your-words-h"><div class="ch-head"><span class="ch-num" aria-hidden="true">06</span><p class="eyebrow">Ask</p><h2 id="your-words-h">Your words</h2></div><div class="ch-intro"><p>The best words are the ones you’ll actually say. Use this space to find yours.</p></div><div class="block"><div class="reflect"><span class="tag">Reflect</span><h3 style="margin:.3rem 0 .3rem">Write it in your words</h3><ol><li>Something I’ve been noticing is…</li><li>It feels like…</li><li>It’s been happening since…</li><li>It stops me from…</li><li>What I’d like to find out is…</li></ol><div class="lines" aria-hidden="true"></div></div></div><div class="block"><div class="callout"><span class="ic" aria-hidden="true">✓</span><div><h3 class="h4">If the words still won’t come</h3><p>It’s fine to hand your notes to the GP, or to say “I’ve written it down, can I read it to you?” Writing it first is not a weakness. It’s preparation.</p></div></div></div></section>
+      <div style="margin-top:clamp(36px,5vw,64px)"><section class="next" aria-labelledby="next-h"><p class="eyebrow">Where this idea went next</p><h2 id="next-h">From finding words to the tools we use now</h2><p>Language became central to Aletheia. It shaped the Self-Advocacy Journal (with its symptom tracker) and our workshops, and it’s why we build resources in more than one language.</p><div class="links"><a href="/our-work/self-advocacy-journal-health-navigator/">Self-Advocacy Journal & Health Navigator<span>Track symptoms, prepare for appointments</span></a><a href="/our-work/youth-decision-making/youth-workshops/">Youth Workshops<span>“The Words for What You Feel” and more</span></a><a href="/our-work/multilingual-resources/">Multilingual Resources<span>Health words in more languages</span></a><a href="/our-work/voice-packs/archive/use-your-voice/">Next: Archive Edition 03<span>Clear words, and still not being heard</span></a></div></section></div>
+      <nav class="pager no-print" aria-label="Other editions"><a href="/our-work/voice-packs/archive/know-your-body/"><small>Previous</small>Edition 01 · Know Your Body</a><a href="/our-work/voice-packs/archive/use-your-voice/"><small>Next</small>Edition 03 · Use Your Voice</a></nav>
+      <footer class="rfoot">
+  <p><strong style="color:var(--ink)">Health education, not medical advice.</strong> This pack explains general health information so you can understand your body and talk about it. It cannot diagnose you. If you're worried about your health, speak to a doctor, nurse or other health professional. <strong style="color:var(--ink)">In an emergency, call 000.</strong></p>
+  <div class="help"><div><strong>Emergency · 000</strong>If you or someone else is in danger or needs urgent medical help.</div><div><strong>Kids Helpline · 1800 55 1800</strong>Free, 24/7 phone and webchat, ages 5–25.</div><div><strong>Lifeline · 13 11 14</strong>24/7 crisis support. Text 0477 13 11 14.</div><div><strong>headspace · headspace.org.au</strong>Free or low-cost support, ages 12–25.</div></div>
+  <details><summary>Sources and fact-checking (8)</summary><ol><li><a href="https://www.aihw.gov.au/reports/chronic-disease/endometriosis-in-australia-2023/contents/endometriosis" target="_blank" rel="noopener">AIHW (2023): Endometriosis in Australia, 1 in 7 diagnosed by age 44–49</a></li><li><a href="https://www.jeanhailes.org.au/clinical-resources/endometriosis-consult-guide/" target="_blank" rel="noopener">Jean Hailes for Women’s Health: Endometriosis consult guide</a></li><li><a href="https://www.mja.com.au/journal/2018/209/7/translation-and-implementation-australian-led-pcos-guideline-clinical-summary" target="_blank" rel="noopener">Medical Journal of Australia (2018): International evidence-based PCOS guideline, 8–13% of reproductive-age women</a></li><li><a href="https://www.jeanhailes.org.au/health-topics/pmos/" target="_blank" rel="noopener">Jean Hailes for Women’s Health: Polyendocrine metabolic ovarian syndrome (PMOS, formerly PCOS)</a></li><li><a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)00717-8/fulltext" target="_blank" rel="noopener">The Lancet (2026): Polyendocrine metabolic ovarian syndrome, the new name for polycystic ovary syndrome: a multistep global consensus process</a></li><li><a href="https://www.acog.org/womens-health/faqs/heavy-menstrual-bleeding" target="_blank" rel="noopener">ACOG: Heavy menstrual bleeding (patient FAQ)</a></li><li><a href="https://www.rch.org.au/teeninfo/fact-sheets/Periods_%E2%80%93_owning_your_cycle/" target="_blank" rel="noopener">Royal Children’s Hospital Melbourne, Teen Health Info: Periods – owning your cycle</a></li><li><a href="https://headspace.org.au/" target="_blank" rel="noopener">headspace: National Youth Mental Health Foundation (ages 12–25)</a></li></ol></details>
+  <p style="margin-top:1rem">Written and designed by The Aletheia Project resource development team. Scenarios are fictional. We acknowledge the Wurundjeri Woi-wurrung people of the Kulin Nation, where Aletheia was founded. Sovereignty was never ceded.</p>
+</footer>
+    </article>
+  </div>
+</div>
+</div>
+<script>(function(){var root=document.currentScript&&document.currentScript.previousElementSibling;if(!root||!root.classList.contains('avp'))root=document.querySelector('.avp');if(!root)return;
+var bar=root.querySelector('.progress span'),main=root.querySelector('.pack-main');
+if(bar&&main){var t=false;function upd(){var r=main.getBoundingClientRect(),h=r.height-window.innerHeight;var p=h>0?Math.min(1,Math.max(0,-r.top/h)):0;bar.style.width=(p*100).toFixed(1)+'%';t=false}window.addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(upd)}},{passive:true});upd()}
+var links=root.querySelectorAll('[data-toc]');if(links.length&&'IntersectionObserver'in window){var map={};links.forEach(function(a){map[a.getAttribute('data-toc')]=a});var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current')});var a=map[e.target.id];if(a)a.setAttribute('aria-current','true')}})},{rootMargin:'-20% 0px -70% 0px'});root.querySelectorAll('.chapter[id]').forEach(function(s){io.observe(s)})}
+root.querySelectorAll('.toc-mobile a').forEach(function(a){a.addEventListener('click',function(){var d=a.closest('details');if(d)d.open=false})});})();</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Find the Words","description":"Archive Edition 02 of the Aletheia Voice Pack: how to notice what’s normal for you, describe symptoms clearly (what, where, when, how much), track patterns and prepare for a GP appointment.","url":"https://thealetheiaproject.org/our-work/voice-packs/archive/find-the-words/","inLanguage":"en-AU","educationalLevel":"Young people aged 12–25","learningResourceType":"Health literacy resource","isAccessibleForFree":true,"publisher":{"@type":"NGO","name":"The Aletheia Project","url":"https://thealetheiaproject.org"}}</script>
